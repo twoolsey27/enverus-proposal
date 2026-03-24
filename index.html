@@ -1205,13 +1205,7 @@ main { margin-left: var(--nav-width); }
       <!-- 2x2 centered -->
       <div style="max-width:720px; margin:0 auto;">
         <!-- Quadrants with Y-axis integrated -->
-        <div style="display:grid; grid-template-columns:60px 1fr 1fr; grid-template-rows:1fr 1fr; position:relative;">
-          <!-- SBS overlay spanning UL/UR border -->
-          <div style="position:absolute; top:50%; left:calc(50% + 30px); transform:translate(-50%,-50%); z-index:5; background:rgba(255,165,0,0.15); border:2px solid rgba(255,165,0,0.6); border-radius:8px; padding:8px 18px; text-align:center; backdrop-filter:blur(2px);">
-            <div style="font-size:10px; font-weight:700; color:rgba(255,165,0,0.7); text-transform:uppercase; letter-spacing:1px; margin-bottom:2px;">Incoming</div>
-            <div style="font-size:14px; font-weight:700; color:#fff;">SBS</div>
-            <div style="font-size:10px; color:rgba(255,255,255,0.5);">Utility design automation</div>
-          </div>
+        <div style="display:grid; grid-template-columns:60px 1fr 1fr; grid-template-rows:1fr 1fr;">
           <!-- Y-axis spanning both rows -->
           <div style="grid-row:1/3; display:flex; flex-direction:column; align-items:center; justify-content:space-between; padding:8px 8px 8px 0;">
             <div style="font-size:11px; color:rgba(255,255,255,0.4); text-align:center; line-height:1.3;">AI replaces<br>human</div>
@@ -1301,7 +1295,13 @@ main { margin-left: var(--nav-width); }
       <h3 style="font-size:20px; font-weight:700; color:#fff; margin-bottom:8px;">Where Enverus sits today</h3>
       <p style="font-size:14px; color:rgba(255,255,255,0.6); margin-bottom:24px;">Enverus's portfolio spans multiple quadrants. Most of the highest-value products sit in the upper left. The work is making sure they stay there and moving the rest of the portfolio in the right direction.</p>
 
-      <div style="max-width:860px; margin:0 auto; display:grid; grid-template-columns:1fr 1fr; gap:6px;">
+      <div style="max-width:860px; margin:0 auto; display:grid; grid-template-columns:1fr 1fr; gap:6px; position:relative;">
+        <!-- SBS straddling Gold Mines / Battlegrounds -->
+        <div style="position:absolute; top:0; left:50%; transform:translateX(-50%); z-index:5; background:rgba(255,165,0,0.15); border:2px solid rgba(255,165,0,0.6); border-radius:8px; padding:10px 22px; text-align:center; backdrop-filter:blur(4px); top:50%; transform:translate(-50%,-180%);">
+          <div style="font-size:10px; font-weight:700; color:rgba(255,165,0,0.8); text-transform:uppercase; letter-spacing:1px; margin-bottom:2px;">Incoming</div>
+          <div style="font-size:14px; font-weight:700; color:#fff;">SBS</div>
+          <div style="font-size:10px; color:rgba(255,255,255,0.5);">Utility design automation</div>
+        </div>
         <!-- UL: Gold Mines - Enverus -->
         <div style="padding:28px; background:rgba(76,175,80,0.12); border:1px solid rgba(76,175,80,0.3); border-radius:6px;">
           <div style="font-size:13px; font-weight:700; color:var(--grow-green); text-transform:uppercase; letter-spacing:1px; margin-bottom:8px;">GOLD MINES = GROW THE CORE</div>
@@ -1310,7 +1310,6 @@ main { margin-left: var(--nav-width); }
             <span style="background:var(--grow-green); color:#fff; font-size:11px; font-weight:700; padding:5px 12px; border-radius:12px;">EAC Analytics</span>
             <span style="background:var(--grow-green); color:#fff; font-size:11px; font-weight:700; padding:5px 12px; border-radius:12px;">EAC/ENA Cost Optimization</span>
             <span style="background:var(--grow-green); color:#fff; font-size:11px; font-weight:700; padding:5px 12px; border-radius:12px;">Pearl Street</span>
-            <span style="background:rgba(255,165,0,0.8); color:#fff; font-size:11px; font-weight:700; padding:5px 12px; border-radius:12px;">SBS (incoming)</span>
           </div>
         </div>
         <!-- UR: Battlegrounds - Enverus -->
@@ -1320,7 +1319,6 @@ main { margin-left: var(--nav-width); }
           <div style="display:flex; flex-wrap:wrap; gap:6px;">
             <span style="background:var(--bain-red); color:#fff; font-size:11px; font-weight:700; padding:5px 12px; border-radius:12px;">Portions of PET</span>
             <span style="background:var(--bain-red); color:#fff; font-size:11px; font-weight:700; padding:5px 12px; border-radius:12px;">Basic Data Structuring</span>
-            <span style="background:rgba(255,165,0,0.8); color:#fff; font-size:11px; font-weight:700; padding:5px 12px; border-radius:12px;">SBS (incoming)</span>
           </div>
         </div>
         <!-- LL: Core Strongholds - Enverus -->
