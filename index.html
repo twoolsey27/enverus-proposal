@@ -1169,9 +1169,9 @@ main { margin-left: var(--nav-width); }
         <div class="force-icon risk"></div>
         <div class="force-title">The regulatory and commodity outlook is deeply uncertain</div>
         <div class="force-body">
-          Oil prices have surged past $100/barrel, which is good for Enverus's O&amp;G customers in the near term. But Democrats may take the House and roll back oil &amp; gas policy. They could win the presidency in two years. OBBB already reversed renewable incentives that drove PET growth. The macro environment that supports Enverus today could look very different in 18 months.
+          Conflict in the Middle East is reshaping global energy supply chains. The call on US oil and gas resources is increasing as global supply rewires around geopolitical risk, and that's a direct tailwind for Enverus's core E&amp;P data products (EAC, ENA). But domestically, Democrats may take the House and roll back oil &amp; gas policy. OBBB already reversed renewable incentives that drove PET growth. The macro environment that supports Enverus today could look very different in 18 months. Enverus needs a portfolio that performs across these scenarios.
         </div>
-        <div class="force-stat">Near-term strength, long-term uncertainty</div>
+        <div class="force-stat">ME conflict drives US supply demand. Policy uncertainty creates long-term risk.</div>
       </div>
 
       <div class="force-card fade-in">
@@ -1205,7 +1205,13 @@ main { margin-left: var(--nav-width); }
       <!-- 2x2 centered -->
       <div style="max-width:720px; margin:0 auto;">
         <!-- Quadrants with Y-axis integrated -->
-        <div style="display:grid; grid-template-columns:60px 1fr 1fr; grid-template-rows:1fr 1fr;">
+        <div style="display:grid; grid-template-columns:60px 1fr 1fr; grid-template-rows:1fr 1fr; position:relative;">
+          <!-- SBS overlay spanning UL/UR border -->
+          <div style="position:absolute; top:50%; left:calc(50% + 30px); transform:translate(-50%,-50%); z-index:5; background:rgba(255,165,0,0.15); border:2px solid rgba(255,165,0,0.6); border-radius:8px; padding:8px 18px; text-align:center; backdrop-filter:blur(2px);">
+            <div style="font-size:10px; font-weight:700; color:rgba(255,165,0,0.7); text-transform:uppercase; letter-spacing:1px; margin-bottom:2px;">Incoming</div>
+            <div style="font-size:14px; font-weight:700; color:#fff;">SBS</div>
+            <div style="font-size:10px; color:rgba(255,255,255,0.5);">Utility design automation</div>
+          </div>
           <!-- Y-axis spanning both rows -->
           <div style="grid-row:1/3; display:flex; flex-direction:column; align-items:center; justify-content:space-between; padding:8px 8px 8px 0;">
             <div style="font-size:11px; color:rgba(255,255,255,0.4); text-align:center; line-height:1.3;">AI replaces<br>human</div>
@@ -1299,20 +1305,22 @@ main { margin-left: var(--nav-width); }
         <!-- UL: Gold Mines - Enverus -->
         <div style="padding:28px; background:rgba(76,175,80,0.12); border:1px solid rgba(76,175,80,0.3); border-radius:6px;">
           <div style="font-size:13px; font-weight:700; color:var(--grow-green); text-transform:uppercase; letter-spacing:1px; margin-bottom:8px;">GOLD MINES = GROW THE CORE</div>
-          <div style="font-size:13px; color:rgba(255,255,255,0.55); line-height:1.5; margin-bottom:14px;">Proprietary data + high automation potential. Build end-to-end AI agents, shift to outcome-based pricing.</div>
+          <div style="font-size:13px; color:rgba(255,255,255,0.55); line-height:1.5; margin-bottom:14px;">Proprietary data + high automation potential. Build end-to-end AI agents, shift to outcome-based pricing. SBS adds utility design workflows with deep IOU penetration.</div>
           <div style="display:flex; flex-wrap:wrap; gap:6px;">
             <span style="background:var(--grow-green); color:#fff; font-size:11px; font-weight:700; padding:5px 12px; border-radius:12px;">EAC Analytics</span>
             <span style="background:var(--grow-green); color:#fff; font-size:11px; font-weight:700; padding:5px 12px; border-radius:12px;">EAC/ENA Cost Optimization</span>
             <span style="background:var(--grow-green); color:#fff; font-size:11px; font-weight:700; padding:5px 12px; border-radius:12px;">Pearl Street</span>
+            <span style="background:rgba(255,165,0,0.8); color:#fff; font-size:11px; font-weight:700; padding:5px 12px; border-radius:12px;">SBS (incoming)</span>
           </div>
         </div>
         <!-- UR: Battlegrounds - Enverus -->
         <div style="padding:28px; background:rgba(255,107,107,0.1); border:1px solid rgba(255,107,107,0.3); border-radius:6px;">
           <div style="font-size:13px; font-weight:700; color:var(--bain-red); text-transform:uppercase; letter-spacing:1px; margin-bottom:8px;">BATTLEGROUNDS = BUILD &ldquo;ENGINE TWO&rdquo;</div>
-          <div style="font-size:13px; color:rgba(255,255,255,0.55); line-height:1.5; margin-bottom:14px;">Don't just defend these - build what replaces them. These are the most exposed products and the biggest opportunity for new offerings.</div>
+          <div style="font-size:13px; color:rgba(255,255,255,0.55); line-height:1.5; margin-bottom:14px;">Don't just defend these - build what replaces them. SBS's AutoCAD-based design tools are ripe for AI-native rebuild. Biggest opportunity for new offerings.</div>
           <div style="display:flex; flex-wrap:wrap; gap:6px;">
             <span style="background:var(--bain-red); color:#fff; font-size:11px; font-weight:700; padding:5px 12px; border-radius:12px;">Portions of PET</span>
             <span style="background:var(--bain-red); color:#fff; font-size:11px; font-weight:700; padding:5px 12px; border-radius:12px;">Basic Data Structuring</span>
+            <span style="background:rgba(255,165,0,0.8); color:#fff; font-size:11px; font-weight:700; padding:5px 12px; border-radius:12px;">SBS (incoming)</span>
           </div>
         </div>
         <!-- LL: Core Strongholds - Enverus -->
@@ -1725,7 +1733,8 @@ const PROPOSAL_DATA = {
         "Where is AI going to shrink the TAM vs. grow it? What's the net exposure by BU?",
         "Can AI leapfrog traditional cost-out steps like offshoring, and what does that mean for the margin roadmap?",
         "How does Enverus maintain pricing power (4-6% escalators) when AI is changing what customers think a seat is worth?",
-        "How do we use AI to boost productivity in ENA Transactions, Land & Title, and Regulatory without exposing proprietary data?"
+        "How do we use AI to boost productivity in ENA Transactions, Land & Title, and Regulatory without exposing proprietary data?",
+        "Where should Enverus acquire defensively in the core EAC/ENA space to protect the data moat? What does a 'Westwood playbook' look like for bolt-on acquisitions that deepen proprietary datasets?"
       ],
       initiatives: [
         { id: "offshoring", name: "Offshoring / low-cost labor", bu: "Cross-BU", buClass: "cross", ebitda: "$125M+", ebitdaDetail: "7.1% EBITDA margin uplift", urgency: "Mid-term", urgencyClass: "mid", sizing: "Reach 50%+ low-cost labor vs. 31% today via attrition", activities: "Assess current labor footprint, identify roles suitable for offshore transition, develop migration timeline", owner: "COO" },
@@ -1736,6 +1745,7 @@ const PROPOSAL_DATA = {
         { id: "cloud", name: "Cloud infrastructure optimization", bu: "Cross-BU", buClass: "cross", ebitda: "<$10M", ebitdaDetail: "Optimize $17M cloud spend", urgency: "Near-term", urgencyClass: "near", sizing: "Optimize $17M cloud spend across AWS, Azure, etc.", activities: "Cloud spend audit, right-sizing, reserved instance strategy, FinOps implementation", owner: "CTO" },
         { id: "procurement", name: "Indirect procurement", bu: "Cross-BU", buClass: "cross", ebitda: "$8-9M", ebitdaDetail: "0.5% EBITDA margin uplift", urgency: "Near-term", urgencyClass: "near", sizing: "Optimize $60M in indirect procurement spend", activities: "Category analysis, vendor consolidation, renegotiation of key contracts", owner: "CFO" },
         { id: "ai-products", name: "AI-enabled product enhancements", bu: "Cross-BU", buClass: "cross", ebitda: "TBD", ebitdaDetail: "Price increase from GenAI features", urgency: "Mid-term", urgencyClass: "mid", sizing: "Develop AI workflows in existing products to reduce manual effort and increase willingness to pay", activities: "Identify highest-value AI features by segment, prototype, test with key accounts", owner: "CPO" },
+        { id: "defensive-ma", name: "Defensive M&A in core EAC/ENA", bu: "EAC + ENA", buClass: "eac", ebitda: "$5-15M", ebitdaDetail: "Protect data moat via bolt-on acquisitions", urgency: "Mid-term", urgencyClass: "mid", sizing: "Identify and acquire 'Westwood-type' assets with proprietary datasets in the core EAC/ENA space - companies like Welligence (international upstream valuations), Rextag (energy infrastructure GIS), or niche providers whose data would deepen Enverus's moat if owned or become a threat if acquired by competitors", activities: "Target screening, data asset evaluation, strategic fit assessment, integration playbook leveraging Westwood acquisition learnings", owner: "Corp Dev" },
         { id: "d-discover-1", name: "Defensibility audit by product", bu: "TBD", buClass: "cross", ebitda: "TBD", ebitdaDetail: "To be sized during engagement", urgency: "Discovery", urgencyClass: "mid", sizing: "Map each product's proprietary data depth and switching costs to assess true defensibility", activities: "To be defined based on strategic question findings", owner: "TBD", discovery: true }
       ]
     },
@@ -1743,7 +1753,7 @@ const PROPOSAL_DATA = {
       questions: [
         "How do we get product launches to happen 90% faster, driven by customer needs rather than internal roadmaps?",
         "Where can pricing evolve from seat-based to value-based? Which segments and products are best suited?",
-        "What's the path to locking in every utility logo post-SBS, and what adjacencies keep the growth going after that?",
+        "SBS gives Enverus >90% penetration of the top 25 IOUs. What's the path to locking in every utility logo, and what adjacencies (Pearl Street + SBS + CRCL) keep the growth going after that?",
         "How do we monetize ENA's $500B transaction network beyond O&G: transaction insights, purchasing behavior data, new verticals?",
         "What is the full potential of payments monetization across ENA's flow? Which 2-3 opportunities move first?",
         "Power needs to grow meaningfully above 20%. What new products fill portfolio gaps, and where do we expand?"
@@ -1755,7 +1765,7 @@ const PROPOSAL_DATA = {
         { id: "sow-expand", name: "Expand scope with existing customers", bu: "ENA", buClass: "ena", ebitda: "$5-10M", ebitdaDetail: "5% increase in modules per customer", urgency: "Near-term", urgencyClass: "near", sizing: "Expand ENA module penetration across existing clients by 5%", activities: "Customer whitespace analysis, cross-sell playbook, account manager enablement", owner: "CRO" },
         { id: "iou-accel", name: "Commercial acceleration with IOUs", bu: "PET", buClass: "pet", ebitda: "$5-10M", ebitdaDetail: "10-15% IOU penetration growth", urgency: "Near-term", urgencyClass: "near", sizing: "Increase sales focus and conversion with IOUs for 10-15% penetration growth", activities: "IOU account prioritization, dedicated sales motion, product packaging for utility buyers", owner: "GM PET" },
         { id: "ena-pet-xsell", name: "ENA-to-PET cross-sell", bu: "Cross-BU", buClass: "cross", ebitda: "<$10M", ebitdaDetail: "Expand ENA to PET customer base", urgency: "Mid-term", urgencyClass: "mid", sizing: "Use ENA's network to introduce PET capabilities to upstream customers", activities: "Customer overlap mapping, bundling strategy, joint sales motions", owner: "CRO" },
-        { id: "g-discover-1", name: "SBS integration cross-sell", bu: "TBD", buClass: "cross", ebitda: "TBD", ebitdaDetail: "To be sized during engagement", urgency: "Discovery", urgencyClass: "mid", sizing: "Identify cross-sell opportunities unlocked by SBS integration", activities: "To be defined based on strategic question findings", owner: "TBD", discovery: true },
+        { id: "sbs-integration", name: "SBS integration + IOU cross-sell", bu: "PET + SBS", buClass: "pet", ebitda: "$15-30M", ebitdaDetail: "Cross-sell into SBS's 90%+ IOU base", urgency: "Near-term", urgencyClass: "near", sizing: "SBS brings >90% penetration of the top 25 IOUs and deep utility engineering workflows. Cross-sell Pearl Street (interconnection), CRCL (generation forecasting), and PET power analytics into SBS's installed base. Build the integrated utility capital planning stack.", activities: "Customer overlap mapping, joint account planning, product bundling, IMO stand-up and integration execution", owner: "GM PET + SBS CEO" },
         { id: "g-discover-2", name: "Sales force effectiveness", bu: "TBD", buClass: "cross", ebitda: "TBD", ebitdaDetail: "To be sized during engagement", urgency: "Discovery", urgencyClass: "mid", sizing: "Assess commercial capabilities needed for 20% growth and design organizational changes", activities: "To be defined based on strategic question findings", owner: "TBD", discovery: true }
       ]
     },
@@ -1763,7 +1773,7 @@ const PROPOSAL_DATA = {
       questions: [
         "What does Enverus need to look like in 2035? Given geopolitical volatility, policy uncertainty, and AI disruption, what is the right long-term portfolio?",
         "Which AI-native competitors are real threats today, and which are noise? What's the plan for each?",
-        "Which PET products need to be rebuilt as AI-native before competitors replicate them? What does that product look like?",
+        "Which PET products need to be rebuilt as AI-native before competitors replicate them? SBS's AutoCAD-based design tools are a prime candidate - what does AI-native utility design look like?",
         "What new products can Enverus build on its data moat that don't exist today? Where do agentic AI offerings create entirely new markets?",
         "How does Enverus expand internationally before super-majors switch to less-tailored, more global software alternatives?",
         "What is the right M&A strategy to build capabilities vs. buy revenue? How should bolt-on acquisitions be sequenced?"
