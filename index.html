@@ -1,0 +1,2162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Enverus Full Potential Partnership | Bain & Company</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<!-- Chart.js removed - not currently used -->
+<style>
+/* ========== CSS CUSTOM PROPERTIES ========== */
+:root {
+  /* Bain brand */
+  --bain-red: #cc0000;
+  --bain-dark: #1a1a2e;
+
+  /* Enverus brand */
+  --enverus-green: #56BC2F;
+  --enverus-green-dark: #3d8a1f;
+  --enverus-gray: #494C4F;
+  --enverus-orange: #FF5F23;
+
+  /* Blended palette */
+  --primary: #1a1a2e;
+  --navy: #16213e;
+  --navy-light: #1a2744;
+  --warm-white: #f8f9fa;
+  --off-white: #f0f1f3;
+  --text: #2d2d3a;
+  --text-light: #6b7280;
+  --text-muted: #9ca3af;
+  --border: #e5e7eb;
+  --border-light: #f3f4f6;
+
+  /* Pillar colors - Enverus green for Grow, Bain red-adjacent for Defend */
+  --defend-red: #c94040;
+  --defend-bg: #fef2f2;
+  --defend-border: #fecaca;
+  --grow-green: #3d8a1f;
+  --grow-bg: #f0fdf4;
+  --grow-border: #bbf7d0;
+  --engine-blue: #2563eb;
+  --engine-bg: #eff6ff;
+  --engine-border: #bfdbfe;
+
+  /* BU badges */
+  --pet-color: #7c3aed;
+  --eac-color: #0891b2;
+  --ena-color: #d97706;
+  --cross-color: #64748b;
+
+  --nav-width: 56px;
+  --nav-width-expanded: 220px;
+  --section-padding: 80px;
+  --max-content: 1140px;
+  --card-radius: 4px;
+  --transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* ========== RESET & BASE ========== */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; font-size: 16px; }
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  color: var(--text);
+  background: var(--warm-white);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ========== LEFT NAV ========== */
+.nav {
+  position: fixed; left: 0; top: 0; bottom: 0;
+  width: var(--nav-width);
+  background: var(--primary);
+  z-index: 100;
+  display: flex; flex-direction: column;
+  align-items: center;
+  padding: 24px 0;
+  transition: width var(--transition);
+  overflow: hidden;
+}
+.nav:hover { width: var(--nav-width-expanded); }
+.nav-logo {
+  font-size: 11px; font-weight: 800; letter-spacing: 2px;
+  color: var(--bain-red);
+  text-transform: uppercase;
+  margin-bottom: 48px;
+  white-space: nowrap;
+  padding: 0 16px;
+  width: 100%;
+}
+.nav-logo .nav-logo-x {
+  color: rgba(255,255,255,0.3);
+  font-weight: 400;
+  margin: 0 4px;
+}
+.nav-logo .nav-logo-enverus {
+  color: var(--enverus-green);
+}
+.nav-items { list-style: none; width: 100%; flex: 1; }
+.nav-item {
+  display: flex; align-items: center; gap: 14px;
+  padding: 12px 18px;
+  color: rgba(255,255,255,0.4);
+  font-size: 12px; font-weight: 500;
+  cursor: pointer;
+  transition: all var(--transition);
+  white-space: nowrap;
+  text-decoration: none;
+  border-left: 3px solid transparent;
+}
+.nav-item:hover, .nav-item.active {
+  color: #fff;
+  background: rgba(255,255,255,0.05);
+}
+.nav-item.active { border-left-color: var(--bain-red); }
+.nav-dot {
+  width: 8px; height: 8px;
+  border-radius: 50%;
+  background: currentColor;
+  flex-shrink: 0;
+  transition: transform var(--transition);
+}
+.nav-item.active .nav-dot { transform: scale(1.4); }
+.nav-label { opacity: 0; transition: opacity var(--transition); }
+.nav:hover .nav-label { opacity: 1; }
+
+/* ========== MAIN CONTENT ========== */
+main { margin-left: var(--nav-width); }
+
+/* ========== SECTION BASE ========== */
+.section {
+  padding: var(--section-padding) 64px;
+  max-width: calc(var(--max-content) + 128px);
+  margin: 0 auto;
+}
+.section-dark {
+  background: var(--navy);
+  color: #fff;
+  max-width: none;
+}
+.section-dark .section-inner {
+  max-width: var(--max-content);
+  margin: 0 auto;
+  padding: 0 64px;
+}
+
+/* ========== SECTION 0: HERO ========== */
+#hero {
+  min-height: 100vh;
+  display: flex; flex-direction: column;
+  justify-content: center;
+  background: linear-gradient(135deg, #222240 0%, #2a3a5c 100%);
+  color: #fff;
+  padding: 120px 80px;
+  padding-left: max(80px, calc((100vw - var(--nav-width) - 960px) / 2));
+  padding-right: max(80px, calc((100vw - var(--nav-width) - 960px) / 2));
+  max-width: none;
+  position: relative;
+  overflow: hidden;
+}
+.hero-logos {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  margin-bottom: 40px;
+}
+.hero-logo-bain img {
+  height: 28px;
+  width: auto;
+}
+.hero-logo-enverus img {
+  height: 28px;
+  width: auto;
+}
+.hero-logo-divider {
+  width: 1px;
+  height: 32px;
+  background: rgba(255,255,255,0.3);
+}
+#hero::before {
+  content: '';
+  position: absolute; top: 0; left: 0; right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, var(--bain-red) 0%, var(--bain-red) 50%, var(--enverus-green) 50%, var(--enverus-green) 100%);
+}
+#hero::after {
+  content: '';
+  position: absolute; right: -200px; bottom: -200px;
+  width: 600px; height: 600px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(86,188,47,0.05) 0%, transparent 70%);
+}
+.hero-eyebrow {
+  font-size: 11px; font-weight: 700; letter-spacing: 3px;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.5);
+  margin-bottom: 24px;
+}
+.hero-title {
+  font-size: clamp(32px, 4vw, 48px);
+  font-weight: 800;
+  line-height: 1.15;
+  margin-bottom: 28px;
+}
+.hero-subtitle {
+  font-size: 17px; line-height: 1.7;
+  color: rgba(255,255,255,0.7);
+  margin-bottom: 48px;
+}
+.hero-stat {
+  display: inline-flex; align-items: baseline; gap: 12px;
+  padding: 16px 24px;
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: var(--card-radius);
+}
+.hero-stat-number {
+  font-size: 36px; font-weight: 800;
+  color: var(--bain-red);
+}
+.hero-stat-label {
+  font-size: 14px;
+  color: rgba(255,255,255,0.6);
+}
+.hero-bain {
+  position: absolute; bottom: 32px; right: 48px;
+  font-size: 11px; font-weight: 700; letter-spacing: 2px;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.2);
+}
+.hero-scroll {
+  position: absolute; bottom: 32px; left: 50%;
+  transform: translateX(-50%);
+  color: rgba(255,255,255,0.3);
+  font-size: 12px;
+  display: flex; flex-direction: column; align-items: center; gap: 8px;
+}
+.hero-scroll-arrow {
+  width: 20px; height: 20px;
+  border-right: 2px solid rgba(255,255,255,0.3);
+  border-bottom: 2px solid rgba(255,255,255,0.3);
+  transform: rotate(45deg);
+  animation: bounce 2s infinite;
+}
+@keyframes bounce {
+  0%, 100% { transform: rotate(45deg) translateY(0); }
+  50% { transform: rotate(45deg) translateY(6px); }
+}
+
+/* ========== SECTION 1: LANDSCAPE ========== */
+.landscape-intro {
+  font-size: 20px; line-height: 1.7;
+  color: rgba(255,255,255,0.85);
+  max-width: none;
+  margin-bottom: 56px;
+}
+.landscape-intro strong { color: #fff; font-weight: 700; }
+.force-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-bottom: 48px;
+}
+.force-card {
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: var(--card-radius);
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  transition: all var(--transition);
+}
+.force-card:hover {
+  background: rgba(255,255,255,0.07);
+  border-color: rgba(255,255,255,0.15);
+}
+.force-icon {
+  font-size: 14px; font-weight: 700;
+  text-transform: uppercase; letter-spacing: 1.5px;
+  margin-bottom: 16px;
+}
+.force-icon.threat { color: var(--defend-red); }
+.force-icon.tailwind { color: var(--grow-green); }
+.force-icon.risk { color: var(--engine-blue); }
+.force-icon.paradox { color: #f59e0b; }
+.force-title {
+  font-size: 18px; font-weight: 700;
+  color: #fff;
+  margin-bottom: 12px;
+}
+.force-body {
+  font-size: 14px; line-height: 1.7;
+  color: rgba(255,255,255,0.65);
+}
+.force-stat {
+  display: inline-block;
+  margin-top: auto;
+  padding-top: 16px;
+  padding: 6px 12px;
+  background: rgba(255,255,255,0.06);
+  border-radius: 3px;
+  font-size: 13px; font-weight: 600;
+  color: rgba(255,255,255,0.8);
+}
+.landscape-cta {
+  font-size: 22px; font-weight: 700;
+  color: #fff;
+  border-top: 1px solid rgba(255,255,255,0.1);
+  padding-top: 32px;
+}
+
+/* ========== SECTION 2: PILLARS ========== */
+.pillar-intro {
+  font-size: 16px; line-height: 1.7;
+  color: var(--text-light);
+  max-width: none;
+  margin-bottom: 40px;
+}
+.pillar-tabs {
+  display: flex; gap: 0;
+  margin-bottom: 0;
+  border-bottom: 2px solid var(--border);
+}
+.pillar-tab {
+  flex: 1;
+  padding: 16px 24px;
+  font-size: 14px; font-weight: 600;
+  text-align: center;
+  cursor: pointer;
+  border-bottom: 3px solid transparent;
+  margin-bottom: -2px;
+  transition: all var(--transition);
+  color: var(--text-muted);
+  background: none; border-top: none; border-left: none; border-right: none;
+}
+.pillar-tab:hover { color: var(--text); }
+.pillar-tab.active { color: var(--text); }
+.pillar-tab[data-pillar="defend"].active { border-bottom-color: var(--defend-red); color: var(--defend-red); }
+.pillar-tab[data-pillar="grow"].active { border-bottom-color: var(--grow-green); color: var(--grow-green); }
+.pillar-tab[data-pillar="engine"].active { border-bottom-color: var(--engine-blue); color: var(--engine-blue); }
+.pillar-tab-num {
+  display: block;
+  font-size: 11px; font-weight: 700;
+  text-transform: uppercase; letter-spacing: 1.5px;
+  margin-bottom: 4px;
+  opacity: 0.5;
+}
+
+.pillar-content { display: none; padding-top: 40px; }
+.pillar-content.active { display: block; }
+
+.pillar-header {
+  display: flex; align-items: flex-start; gap: 32px;
+  margin-bottom: 40px;
+}
+.pillar-framing { flex: 1; }
+.pillar-framing h3 {
+  font-size: 24px; font-weight: 700;
+  margin-bottom: 12px;
+}
+.pillar-framing p {
+  font-size: 15px; line-height: 1.7;
+  color: var(--text-light);
+}
+.pillar-ebitda {
+  flex-shrink: 0;
+  text-align: center;
+  padding: 20px 28px;
+  border-radius: var(--card-radius);
+}
+.pillar-ebitda-label {
+  font-size: 11px; font-weight: 700;
+  text-transform: uppercase; letter-spacing: 1px;
+  margin-bottom: 4px;
+}
+.pillar-ebitda-value {
+  font-size: 28px; font-weight: 800;
+}
+.pillar-ebitda-sub {
+  font-size: 11px;
+  opacity: 0.6;
+}
+.pillar-ebitda.defend { background: var(--defend-bg); color: var(--defend-red); }
+.pillar-ebitda.grow { background: var(--grow-bg); color: var(--grow-green); }
+.pillar-ebitda.engine { background: var(--engine-bg); color: var(--engine-blue); }
+
+.questions-section { margin-bottom: 40px; }
+.questions-header {
+  font-size: 18px; font-weight: 700;
+  color: var(--text);
+  margin-bottom: 8px;
+}
+.question-list { list-style: none; }
+.question-item {
+  display: flex; align-items: flex-start; gap: 12px;
+  padding: 12px 0;
+  border-bottom: 1px solid var(--border-light);
+  font-size: 14px; line-height: 1.6;
+  color: var(--text);
+}
+.question-bullet {
+  width: 6px; height: 6px;
+  border-radius: 50%;
+  flex-shrink: 0;
+  margin-top: 8px;
+}
+.defend .question-bullet { background: var(--defend-red); }
+.grow .question-bullet { background: var(--grow-green); }
+.engine .question-bullet { background: var(--engine-blue); }
+
+.initiative-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(420px, 1fr));
+  gap: 16px;
+}
+.initiative-card {
+  border: 1px solid var(--border);
+  border-radius: var(--card-radius);
+  background: #fff;
+  transition: all var(--transition);
+  cursor: pointer;
+  overflow: hidden;
+}
+.initiative-card:hover {
+  border-color: var(--text-muted);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+}
+.initiative-card-header {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 16px 20px;
+  gap: 12px;
+}
+.initiative-card-left {
+  display: flex; align-items: center; gap: 12px;
+  flex: 1; min-width: 0;
+}
+.initiative-card-name {
+  font-size: 14px; font-weight: 600;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.bu-badge {
+  font-size: 10px; font-weight: 700;
+  text-transform: uppercase; letter-spacing: 0.5px;
+  padding: 2px 8px;
+  border-radius: 2px;
+  flex-shrink: 0;
+}
+.bu-badge.pet { background: #ede9fe; color: var(--pet-color); }
+.bu-badge.eac { background: #ecfeff; color: var(--eac-color); }
+.bu-badge.ena { background: #fffbeb; color: var(--ena-color); }
+.bu-badge.cross { background: #f1f5f9; color: var(--cross-color); }
+
+.initiative-card-meta {
+  display: flex; align-items: center; gap: 16px;
+  flex-shrink: 0;
+}
+.ebitda-tag {
+  font-size: 12px; font-weight: 700;
+}
+.urgency-tag {
+  font-size: 10px; font-weight: 600;
+  text-transform: uppercase; letter-spacing: 0.5px;
+  padding: 2px 8px;
+  border-radius: 2px;
+  background: var(--off-white);
+  color: var(--text-muted);
+}
+.urgency-tag.near { background: #dcfce7; color: #166534; }
+.urgency-tag.mid { background: #fef3c7; color: #92400e; }
+.urgency-tag.long { background: #e0e7ff; color: #3730a3; }
+
+.expand-icon {
+  font-size: 12px; color: var(--text-muted);
+  transition: transform var(--transition);
+}
+.initiative-card.expanded .expand-icon { transform: rotate(180deg); }
+
+.initiative-card-body {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease;
+}
+.initiative-card.expanded .initiative-card-body {
+  max-height: 400px;
+}
+.initiative-card-detail {
+  padding: 0 20px 20px;
+  border-top: 1px solid var(--border-light);
+}
+.initiative-detail-row {
+  display: flex; gap: 24px;
+  margin-top: 12px;
+}
+.initiative-detail-col { flex: 1; }
+.initiative-detail-label {
+  font-size: 10px; font-weight: 700;
+  text-transform: uppercase; letter-spacing: 1px;
+  color: var(--text-muted);
+  margin-bottom: 4px;
+}
+.initiative-detail-value {
+  font-size: 13px; line-height: 1.6;
+  color: var(--text);
+}
+
+/* ========== SECTION 2B: HEAD START (dark bg) ========== */
+.section-dark .pillar-tab {
+  color: rgba(255,255,255,0.7);
+  border-bottom-color: transparent;
+}
+.section-dark .pillar-tab:hover { color: #fff; }
+.section-dark .pillar-tab.active { color: #fff; }
+.section-dark .pillar-tab[data-pillar="hs-defend"].active { border-bottom-color: #ff6b6b; color: #fff; }
+.section-dark .pillar-tab[data-pillar="hs-grow"].active { border-bottom-color: #7cdf55; color: #fff; }
+.section-dark .pillar-tab[data-pillar="hs-engine"].active { border-bottom-color: #6b9fff; color: #fff; }
+.section-dark .pillar-tab .pillar-tab-num { opacity: 0.8; }
+.section-dark .initiative-card {
+  background: rgba(255,255,255,0.08);
+  border-color: rgba(255,255,255,0.15);
+  color: #fff;
+}
+.section-dark .initiative-card:hover {
+  background: rgba(255,255,255,0.12);
+  border-color: rgba(255,255,255,0.25);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+.section-dark .initiative-card-name { color: #fff; }
+.section-dark .ebitda-tag { color: rgba(255,255,255,0.9); }
+.section-dark .urgency-tag { background: rgba(255,255,255,0.15); color: rgba(255,255,255,0.8); }
+.section-dark .initiative-card-detail { border-top-color: rgba(255,255,255,0.15); }
+.section-dark .initiative-detail-label { color: rgba(255,255,255,0.6); }
+.section-dark .initiative-detail-value { color: rgba(255,255,255,0.85); }
+.section-dark .expand-icon { color: rgba(255,255,255,0.5); }
+.section-dark .bu-badge { opacity: 0.9; }
+.initiative-card.discovery {
+  border-style: dashed;
+}
+.section-dark .initiative-card.discovery {
+  border-style: dashed;
+  border-color: rgba(255,255,255,0.25);
+  background: rgba(255,255,255,0.04);
+}
+.discovery-badge {
+  font-size: 9px; font-weight: 700;
+  text-transform: uppercase; letter-spacing: 0.5px;
+  padding: 2px 6px;
+  border-radius: 2px;
+  background: rgba(255,255,255,0.15);
+  color: rgba(255,255,255,0.75);
+}
+
+/* ========== SECTION 3: HOPPER ========== */
+.hopper-intro {
+  display: flex; justify-content: space-between; align-items: flex-end;
+  margin-bottom: 32px;
+  gap: 24px;
+}
+.hopper-intro-text { flex: 1; }
+.hopper-intro-text h2 { font-size: 28px; font-weight: 700; margin-bottom: 8px; }
+.hopper-intro-text p { font-size: 15px; color: var(--text-light); }
+.simulate-btn {
+  padding: 12px 24px;
+  background: var(--primary);
+  color: #fff;
+  border: none;
+  border-radius: var(--card-radius);
+  font-family: inherit;
+  font-size: 13px; font-weight: 600;
+  cursor: pointer;
+  transition: all var(--transition);
+  white-space: nowrap;
+}
+.simulate-btn:hover { background: var(--navy); transform: translateY(-1px); }
+.simulate-btn:active { transform: translateY(0); }
+.simulate-btn.running { opacity: 0.6; pointer-events: none; }
+
+.timeline-bar {
+  display: flex;
+  background: var(--off-white);
+  border-radius: var(--card-radius);
+  margin-bottom: 24px;
+  overflow: hidden;
+  border: 1px solid var(--border);
+}
+.timeline-segment {
+  padding: 12px 20px;
+  font-size: 12px; font-weight: 600;
+  flex: 1;
+  text-align: center;
+  border-right: 1px solid var(--border);
+}
+.timeline-segment:last-child { border-right: none; }
+.timeline-segment-label {
+  font-size: 10px; font-weight: 700;
+  text-transform: uppercase; letter-spacing: 1px;
+  color: var(--text-muted);
+  display: block;
+  margin-bottom: 2px;
+}
+
+.kanban {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  min-height: 500px;
+}
+.kanban-col {
+  background: var(--off-white);
+  border-radius: var(--card-radius);
+  padding: 16px;
+  border: 1px solid var(--border);
+}
+.kanban-col-header {
+  font-size: 12px; font-weight: 700;
+  text-transform: uppercase; letter-spacing: 1px;
+  color: var(--text-muted);
+  margin-bottom: 4px;
+}
+.kanban-col-count {
+  font-size: 11px;
+  color: var(--text-muted);
+  margin-bottom: 16px;
+}
+.kanban-card {
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: var(--card-radius);
+  padding: 14px;
+  margin-bottom: 10px;
+  transition: all 0.5s ease;
+  cursor: pointer;
+}
+.kanban-card:hover {
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  transform: translateY(-1px);
+}
+.kanban-card.moving {
+  opacity: 0;
+  transform: translateX(50px);
+}
+.kanban-card.arriving {
+  animation: cardArrive 0.5s ease forwards;
+}
+@keyframes cardArrive {
+  from { opacity: 0; transform: translateX(-30px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+.kanban-card-name {
+  font-size: 13px; font-weight: 600;
+  margin-bottom: 8px;
+}
+.kanban-card-meta {
+  display: flex; align-items: center; justify-content: space-between;
+  gap: 8px;
+}
+.kanban-card-ebitda {
+  font-size: 11px; font-weight: 700;
+}
+.kanban-card-pillar {
+  font-size: 9px; font-weight: 700;
+  text-transform: uppercase; letter-spacing: 0.5px;
+  padding: 2px 6px;
+  border-radius: 2px;
+}
+.kanban-card-pillar.defend { background: var(--defend-bg); color: var(--defend-red); }
+.kanban-card-pillar.grow { background: var(--grow-bg); color: var(--grow-green); }
+.kanban-card-pillar.engine { background: var(--engine-bg); color: var(--engine-blue); }
+
+/* ========== SECTION 4: DIFFERENTIATORS ========== */
+.diff-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+  margin-bottom: 56px;
+}
+.diff-card {
+  border: 1px solid var(--border);
+  border-radius: var(--card-radius);
+  overflow: hidden;
+  background: #fff;
+}
+.diff-card-header {
+  padding: 20px 24px;
+  font-size: 15px; font-weight: 700;
+  border-bottom: 1px solid var(--border);
+}
+.diff-before {
+  padding: 20px 24px;
+  background: #f9fafb;
+  border-bottom: 1px solid var(--border);
+}
+.diff-before-label {
+  font-size: 10px; font-weight: 700;
+  text-transform: uppercase; letter-spacing: 1px;
+  color: var(--text-muted);
+  margin-bottom: 8px;
+}
+.diff-before p {
+  font-size: 13px; line-height: 1.6;
+  color: var(--text-light);
+  font-style: italic;
+}
+.diff-after {
+  padding: 20px 24px;
+}
+.diff-after-label {
+  font-size: 10px; font-weight: 700;
+  text-transform: uppercase; letter-spacing: 1px;
+  color: var(--grow-green);
+  margin-bottom: 8px;
+}
+.diff-after p {
+  font-size: 13px; line-height: 1.6;
+  color: var(--text);
+}
+
+/* AAA Framework */
+.aaa-section {
+  padding-top: 40px;
+  border-top: 1px solid var(--border);
+}
+.aaa-section h3 {
+  font-size: 22px; font-weight: 700;
+  margin-bottom: 32px;
+}
+.aaa-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  position: relative;
+}
+.aaa-card {
+  padding: 32px 24px;
+  border-radius: var(--card-radius);
+  text-align: center;
+}
+.aaa-card.assure { background: var(--defend-bg); border: 1px solid var(--defend-border); }
+.aaa-card.amplify { background: var(--grow-bg); border: 1px solid var(--grow-border); }
+.aaa-card.accelerate { background: var(--engine-bg); border: 1px solid var(--engine-border); }
+.aaa-card-title {
+  font-size: 16px; font-weight: 700;
+  margin-bottom: 12px;
+}
+.aaa-card.assure .aaa-card-title { color: var(--defend-red); }
+.aaa-card.amplify .aaa-card-title { color: var(--grow-green); }
+.aaa-card.accelerate .aaa-card-title { color: var(--engine-blue); }
+.aaa-card p {
+  font-size: 13px; line-height: 1.7;
+  color: var(--text-light);
+}
+.aaa-arrow {
+  display: flex; align-items: center; justify-content: center;
+  font-size: 20px; color: var(--text-muted);
+}
+
+/* ========== SECTION 5: COMMERCIAL ========== */
+.pricing-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-bottom: 56px;
+}
+.pricing-card {
+  border: 2px solid var(--border);
+  border-radius: var(--card-radius);
+  padding: 32px 28px;
+  cursor: pointer;
+  transition: all var(--transition);
+  background: #fff;
+  position: relative;
+}
+.pricing-card:hover {
+  border-color: var(--text-muted);
+}
+.pricing-card.selected {
+  border-color: var(--primary);
+  box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+}
+.pricing-card-rec {
+  position: absolute; top: -1px; right: 24px;
+  background: var(--primary);
+  color: #fff;
+  font-size: 10px; font-weight: 700;
+  text-transform: uppercase; letter-spacing: 1px;
+  padding: 4px 12px;
+  border-radius: 0 0 3px 3px;
+  display: none;
+}
+.pricing-card.recommended .pricing-card-rec { display: block; }
+.pricing-card-name {
+  font-size: 11px; font-weight: 700;
+  text-transform: uppercase; letter-spacing: 1.5px;
+  color: var(--text-muted);
+  margin-bottom: 8px;
+}
+.pricing-card-price {
+  font-size: 28px; font-weight: 800;
+  color: var(--primary);
+  margin-bottom: 4px;
+}
+.pricing-card-period {
+  font-size: 12px; color: var(--text-muted);
+  margin-bottom: 20px;
+}
+.pricing-card-resources {
+  font-size: 14px; font-weight: 600;
+  margin-bottom: 12px;
+}
+.pricing-card-details {
+  list-style: none;
+}
+.pricing-card-details li {
+  font-size: 13px; line-height: 1.8;
+  color: var(--text-light);
+  padding-left: 16px;
+  position: relative;
+}
+.pricing-card-details li::before {
+  content: '';
+  position: absolute; left: 0; top: 10px;
+  width: 5px; height: 5px;
+  border-radius: 50%;
+  background: var(--text-muted);
+}
+
+/* Collaboration */
+.collab-section {
+  padding-top: 40px;
+  border-top: 1px solid var(--border);
+}
+.collab-section h3 {
+  font-size: 22px; font-weight: 700;
+  margin-bottom: 12px;
+}
+.collab-section > p {
+  font-size: 15px; color: var(--text-light);
+  margin-bottom: 32px;
+  max-width: none;
+}
+.collab-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  margin-bottom: 40px;
+}
+.collab-step {
+  background: var(--off-white);
+  border: 1px solid var(--border);
+  border-radius: var(--card-radius);
+  padding: 24px 20px;
+}
+.collab-step-num {
+  font-size: 24px; font-weight: 800;
+  color: var(--primary);
+  margin-bottom: 8px;
+}
+.collab-step-title {
+  font-size: 14px; font-weight: 600;
+  margin-bottom: 8px;
+}
+.collab-step-desc {
+  font-size: 13px; line-height: 1.6;
+  color: var(--text-light);
+}
+
+/* Gantt */
+.gantt-section { margin-top: 40px; }
+.gantt-section h4 {
+  font-size: 16px; font-weight: 700;
+  margin-bottom: 20px;
+}
+.gantt-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 12px;
+}
+.gantt-table th {
+  font-size: 10px; font-weight: 700;
+  text-transform: uppercase; letter-spacing: 1px;
+  color: var(--text-muted);
+  padding: 8px 12px;
+  text-align: center;
+  border-bottom: 2px solid var(--border);
+}
+.gantt-table th:first-child { text-align: left; width: 180px; }
+.gantt-table td {
+  padding: 8px 4px;
+  border-bottom: 1px solid var(--border-light);
+  text-align: center;
+  position: relative;
+  height: 44px;
+}
+.gantt-table td:first-child {
+  text-align: left;
+  font-weight: 600;
+  padding-left: 12px;
+  font-size: 13px;
+}
+.gantt-bar {
+  display: block;
+  height: 24px;
+  border-radius: 3px;
+  margin: 0 2px;
+}
+.gantt-bar.ai { background: var(--engine-blue); opacity: 0.7; }
+.gantt-bar.vc { background: var(--grow-green); opacity: 0.7; }
+.gantt-bar.ma { background: var(--defend-red); opacity: 0.7; }
+.gantt-bar.half { opacity: 0.35; }
+
+/* Team */
+.team-section {
+  margin-top: 48px;
+  padding-top: 40px;
+  border-top: 1px solid var(--border);
+}
+.team-section h3 {
+  font-size: 22px; font-weight: 700;
+  margin-bottom: 24px;
+}
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 16px;
+}
+.team-member {
+  padding: 20px;
+  border: 1px solid var(--border);
+  border-radius: var(--card-radius);
+  background: #fff;
+}
+.team-member-name {
+  font-size: 15px; font-weight: 600;
+  margin-bottom: 2px;
+}
+.team-member-role {
+  font-size: 12px; color: var(--text-muted);
+}
+.team-member.clickable {
+  cursor: pointer;
+  transition: all var(--transition);
+}
+.team-member.clickable:hover {
+  border-color: var(--text-muted);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+}
+
+/* ========== NEXT STEPS ========== */
+.next-steps {
+  margin-top: 56px;
+  padding: 40px;
+  background: var(--navy);
+  border-radius: var(--card-radius);
+  color: #fff;
+  border-top: 3px solid var(--enverus-green);
+}
+.next-steps h3 {
+  font-size: 20px; font-weight: 700;
+  margin-bottom: 20px;
+}
+.next-steps ol {
+  list-style: none;
+  counter-reset: steps;
+}
+.next-steps li {
+  counter-increment: steps;
+  font-size: 15px; line-height: 1.8;
+  padding-left: 32px;
+  position: relative;
+  color: rgba(255,255,255,0.8);
+}
+.next-steps li::before {
+  content: counter(steps);
+  position: absolute; left: 0; top: 2px;
+  width: 20px; height: 20px;
+  border-radius: 50%;
+  background: var(--bain-red);
+  color: #fff;
+  font-size: 11px; font-weight: 700;
+  display: flex; align-items: center; justify-content: center;
+}
+
+/* ========== SCROLL ANIMATIONS ========== */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ========== COUNTER ANIMATION ========== */
+.counter { display: inline-block; }
+
+/* ========== PRINT ========== */
+@media print {
+  .nav { display: none; }
+  main { margin-left: 0; }
+  .section { padding: 40px 32px; }
+  #hero { min-height: auto; padding: 60px 32px; }
+  .section-dark { background: #333 !important; }
+  .initiative-card-body { max-height: none !important; }
+  .simulate-btn { display: none; }
+}
+
+/* ========== RESPONSIVE ========== */
+@media (max-width: 1024px) {
+  .force-grid { grid-template-columns: 1fr; }
+  .diff-grid { grid-template-columns: 1fr; }
+  .aaa-grid { grid-template-columns: 1fr; }
+  .pricing-grid { grid-template-columns: 1fr; }
+  .kanban { grid-template-columns: repeat(2, 1fr); }
+  .collab-grid { grid-template-columns: repeat(2, 1fr); }
+  #hero {
+    padding-left: 64px;
+    padding-right: 64px;
+  }
+}
+@media (max-width: 768px) {
+  .nav { display: none; }
+  main { margin-left: 0; }
+  .section { padding: 48px 24px; }
+  .section-dark .section-inner { padding: 0 24px; }
+  #hero { padding: 80px 24px; }
+  .hero-logos { gap: 16px; }
+  .hero-logo-bain img, .hero-logo-enverus img { height: 20px; }
+  .hero-title { font-size: 28px; }
+  .hero-subtitle { font-size: 15px; }
+  .hero-stat {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+    padding: 12px 16px;
+  }
+  .hero-stat-number { font-size: 28px; }
+  .hero-stat-label { font-size: 12px; }
+  .kanban { grid-template-columns: 1fr 1fr; }
+  .collab-grid { grid-template-columns: 1fr; }
+  .pillar-header { flex-direction: column; }
+  .initiative-grid { grid-template-columns: 1fr; }
+  .initiative-card-header { flex-wrap: wrap; }
+  .gantt-section { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+  .gantt-table { font-size: 10px; min-width: 600px; }
+  #team-grid { grid-template-columns: 1fr !important; }
+  .pillar-tabs { flex-direction: column; gap: 0; }
+  .pillar-tab { text-align: left; }
+  .bridge-grid { grid-template-columns: 1fr !important; gap: 12px !important; }
+  .bridge-grid > div[style*="font-size:24px"] { display: none; }
+  .stage-defs { grid-template-columns: 1fr 1fr !important; }
+
+}
+@media (prefers-reduced-motion: reduce) {
+  .fade-in { opacity: 1; transform: none; transition: none; }
+  .hero-scroll-arrow { animation: none; }
+}
+</style>
+</head>
+<body>
+
+<!-- ========== NAV ========== -->
+<nav class="nav">
+  <div class="nav-logo">Bain<span class="nav-logo-x">&times;</span><span class="nav-logo-enverus">Enverus</span></div>
+  <ul class="nav-items">
+    <li class="nav-item active" data-section="hero">
+      <span class="nav-dot"></span>
+      <span class="nav-label">Overview</span>
+    </li>
+    <li class="nav-item" data-section="landscape">
+      <span class="nav-dot"></span>
+      <span class="nav-label">The Landscape</span>
+    </li>
+    <li class="nav-item" data-section="pillars">
+      <span class="nav-dot"></span>
+      <span class="nav-label">Three Imperatives</span>
+    </li>
+    <li class="nav-item" data-section="headstart">
+      <span class="nav-dot"></span>
+      <span class="nav-label">Head Start</span>
+    </li>
+    <li class="nav-item" data-section="hopper">
+      <span class="nav-dot"></span>
+      <span class="nav-label">How We Work</span>
+    </li>
+    <li class="nav-item" data-section="differentiators">
+      <span class="nav-dot"></span>
+      <span class="nav-label">Why Bain</span>
+    </li>
+    <li class="nav-item" data-section="commercial">
+      <span class="nav-dot"></span>
+      <span class="nav-label">Commercial</span>
+    </li>
+  </ul>
+</nav>
+
+<!-- ========== MAIN ========== -->
+<main>
+
+<!-- SECTION 0: HERO -->
+<section id="hero" class="section">
+  <div class="hero-logos">
+    <div class="hero-logo-bain">
+      <img src="data:image/png;base64,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" alt="Bain & Company">
+    </div>
+    <div class="hero-logo-divider"></div>
+    <div class="hero-logo-enverus">
+      <img src="data:image/png;base64,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" alt="Enverus">
+    </div>
+  </div>
+  <div class="hero-eyebrow">Full Potential Partnership</div>
+  <h1 class="hero-title">We know Enverus. The world it operates in has fundamentally changed.</h1>
+  <p class="hero-subtitle">Nearly a year ago, we conducted the commercial diligence on Enverus and identified $250M+ in EBITDA opportunity. Since then, the world has shifted: commodity prices, the policy environment, and the future of software are all in flux. Enverus needs to answer some big strategic questions, but it can't afford to wait for answers before it starts moving.</p>
+  <div style="display:flex; gap:24px; flex-wrap:wrap;">
+    <div class="hero-stat">
+      <span class="hero-stat-number" style="color:var(--enverus-green);"><span class="counter" data-target="20" data-suffix="%">0</span></span>
+      <span class="hero-stat-label">top-line growth target</span>
+    </div>
+    <div class="hero-stat">
+      <span class="hero-stat-number">$<span class="counter" data-target="2" data-suffix="T">0</span></span>
+      <span class="hero-stat-label">destroyed in traditional SaaS</span>
+    </div>
+    <div class="hero-stat">
+      <span class="hero-stat-number" style="color:var(--enverus-green);">$<span class="counter" data-target="1" data-suffix="T+">0</span></span>
+      <span class="hero-stat-label">created in AI/data, with room for more</span>
+    </div>
+  </div>
+  <div class="hero-scroll">
+    <span>Scroll</span>
+    <div class="hero-scroll-arrow"></div>
+  </div>
+  <div class="hero-bain">Confidential</div>
+</section>
+
+<!-- SECTION 1: LANDSCAPE -->
+<section id="landscape" class="section section-dark">
+  <div class="section-inner">
+    <p class="landscape-intro fade-in">
+      <strong>Nearly a year ago, we conducted the commercial diligence on Enverus.</strong> We know this business. But the world has shifted meaningfully since we were in the room.
+    </p>
+
+    <div class="force-grid">
+      <div class="force-card fade-in">
+        <div class="force-icon threat"></div>
+        <div class="force-title">Trillions destroyed, trillions created</div>
+        <div class="force-body">
+          $2T in traditional SaaS market cap wiped since August 2025. But in the same period, AI and data companies have seen massive value creation: Databricks hit $134B (up from $62B in 12 months), Anthropic reached $183B, and NVIDIA added $1T+ in market cap. The market is splitting. Companies that own proprietary data and embed AI into workflows are pulling ahead. Companies that just sell seats are getting punished. Enverus has the data. The question is whether it positions on the right side of this divide.
+        </div>
+        <div class="force-stat">$2T destroyed in traditional SaaS. $1T+ created in AI/data.</div>
+      </div>
+
+      <div class="force-card fade-in">
+        <div class="force-icon risk"></div>
+        <div class="force-title">The regulatory and commodity outlook is deeply uncertain</div>
+        <div class="force-body">
+          Oil prices have surged past $100/barrel, which is good for Enverus's O&amp;G customers in the near term. But Democrats may take the House and roll back oil &amp; gas policy. They could win the presidency in two years. OBBB already reversed renewable incentives that drove PET growth. The macro environment that supports Enverus today could look very different in 18 months.
+        </div>
+        <div class="force-stat">Near-term strength, long-term uncertainty</div>
+      </div>
+
+      <div class="force-card fade-in">
+        <div class="force-icon paradox"></div>
+        <div class="force-title">The barriers to entry have dropped, and new competitors are showing up</div>
+        <div class="force-body">
+          Six months ago, replicating Enverus's data products would take years and tens of millions. Today, AI tools let small teams build competitive offerings in months at a fraction of the cost. New startups are already targeting Enverus's space. The same capability shift is also Enverus's biggest opportunity: faster product development, AI-enabled workflows, new offerings on top of proprietary data. But the window to move first is closing.
+        </div>
+        <div class="force-stat">New entrants building at a fraction of historical cost</div>
+      </div>
+    </div>
+
+    <div class="landscape-cta fade-in" style="margin-bottom:40px;">Regardless of where oil prices, policy, or AI go next, Enverus needs a portfolio that wins.</div>
+    <div class="fade-in" style="display:flex; gap:0; justify-content:center;">
+      <div style="background:var(--grow-green); color:#fff; font-size:14px; font-weight:700; text-transform:uppercase; letter-spacing:1.5px; padding:16px 32px; text-align:center; border-radius:var(--card-radius) 0 0 var(--card-radius);">Grow the Core</div>
+      <div style="background:var(--engine-blue); color:#fff; font-size:14px; font-weight:700; text-transform:uppercase; letter-spacing:1.5px; padding:16px 32px; text-align:center;">Defend the Core</div>
+      <div style="background:var(--bain-red); color:#fff; font-size:14px; font-weight:700; text-transform:uppercase; letter-spacing:1.5px; padding:16px 32px; text-align:center; border-radius:0 var(--card-radius) var(--card-radius) 0;">Build &ldquo;Engine Two&rdquo;</div>
+    </div>
+
+    <!-- BAIN 2x2: FRAMEWORK INTRODUCTION -->
+    <div class="fade-in" style="margin-top:56px;">
+      <h3 style="font-size:20px; font-weight:700; color:#fff; margin-bottom:8px; line-height:1.5;">Mapping products and workflows into four strategic scenarios can help set offensive<br>and defensive priorities</h3>
+      <p style="font-size:13px; color:rgba(255,255,255,0.4); margin-bottom:20px;">Click on plus signs to learn more</p>
+
+      <!-- Legend -->
+      <div style="display:flex; gap:20px; margin-bottom:16px; font-size:11px; color:rgba(255,255,255,0.5);">
+        <span><span style="display:inline-block; width:14px; height:14px; background:rgba(255,255,255,0.18); vertical-align:middle; margin-right:5px;"></span>SaaS</span>
+        <span><span style="display:inline-block; width:14px; height:14px; background:var(--bain-red); vertical-align:middle; margin-right:5px;"></span>AI</span>
+      </div>
+
+      <!-- 2x2 centered -->
+      <div style="max-width:720px; margin:0 auto;">
+        <!-- Quadrants with Y-axis integrated -->
+        <div style="display:grid; grid-template-columns:60px 1fr 1fr; grid-template-rows:1fr 1fr;">
+          <!-- Y-axis spanning both rows -->
+          <div style="grid-row:1/3; display:flex; flex-direction:column; align-items:center; justify-content:space-between; padding:8px 8px 8px 0;">
+            <div style="font-size:11px; color:rgba(255,255,255,0.4); text-align:center; line-height:1.3;">AI replaces<br>human</div>
+            <div style="display:flex; flex-direction:column; align-items:center; gap:6px;">
+              <div style="font-size:15px; font-weight:700; color:#fff; text-align:center; line-height:1.4;">
+                Potential for AI<br>to automate an<br>SaaS user task
+              </div>
+              <div class="fw-plus-btn" onclick="toggleFwPopup(this)" style="position:relative;">
+              <div style="width:24px; height:24px; border-radius:50%; background:var(--bain-red); color:#fff; display:flex; align-items:center; justify-content:center; font-size:16px; font-weight:700; cursor:pointer; user-select:none; line-height:1; padding-bottom:1px;">+</div>
+              <div class="fw-popup" style="display:none; position:absolute; left:32px; top:50%; transform:translateY(-50%); background:#111; border:1px solid rgba(255,255,255,0.2); border-radius:6px; padding:14px 16px; width:240px; z-index:10; font-size:11px; color:rgba(255,255,255,0.7); line-height:1.6; text-align:left;">
+                <div style="font-weight:700; color:#fff; margin-bottom:6px;">When can AI automate user tasks?</div>
+                &bull; High-volume, repetitive tasks<br>&bull; Low contextual knowledge<br>&bull; Low process variability<br>&bull; Multistep human workflow<br>&bull; High data availability<br>&bull; Low risk of error
+              </div>
+            </div>
+            </div>
+            <div style="font-size:11px; color:rgba(255,255,255,0.4); text-align:center; line-height:1.3;">AI assists<br>human</div>
+          </div>
+          <!-- UL: Gold Mines -->
+          <div style="padding:24px; border-bottom:2px dashed rgba(255,255,255,0.12); border-right:2px dashed rgba(255,255,255,0.12); min-height:180px; display:flex; flex-direction:column; align-items:center; justify-content:center; text-align:center;">
+            <div style="font-size:15px; font-weight:700; color:#fff; margin-bottom:2px;">AI outshines SaaS:</div>
+            <div style="font-size:15px; font-weight:700; color:#fff; margin-bottom:14px;">Gold mines</div>
+            <div style="width:44px; height:68px; margin-bottom:10px; position:relative; display:flex; flex-direction:column; justify-content:flex-end;">
+              <div style="background:var(--bain-red); height:58%;"></div>
+              <div style="background:rgba(255,255,255,0.18); height:32%;"></div>
+            </div>
+            <div style="font-size:15px; font-weight:700; color:var(--grow-green);">This is where you grow.</div>
+          </div>
+
+          <!-- UR: Battlegrounds -->
+          <div style="padding:24px; border-bottom:2px dashed rgba(255,255,255,0.12); min-height:180px; display:flex; flex-direction:column; align-items:center; justify-content:center; text-align:center;">
+            <div style="font-size:15px; font-weight:700; color:#fff; margin-bottom:2px;">AI cannibalizes SaaS:</div>
+            <div style="font-size:15px; font-weight:700; color:#fff; margin-bottom:14px;">Battlegrounds</div>
+            <div style="width:44px; height:68px; margin-bottom:10px; position:relative; display:flex; flex-direction:column; justify-content:flex-end;">
+              <div style="background:var(--bain-red); height:70%;"></div>
+              <div style="background:rgba(255,255,255,0.18); height:16%;"></div>
+            </div>
+            <div style="font-size:15px; font-weight:700; color:var(--bain-red);">Build "Engine Two" here.</div>
+          </div>
+
+          <!-- LL: Core Strongholds -->
+          <div style="padding:24px; border-right:2px dashed rgba(255,255,255,0.12); min-height:180px; display:flex; flex-direction:column; align-items:center; justify-content:center; text-align:center;">
+            <div style="font-size:15px; font-weight:700; color:#fff; margin-bottom:2px;">AI enhances SaaS:</div>
+            <div style="font-size:15px; font-weight:700; color:#fff; margin-bottom:14px;">Core strongholds</div>
+            <div style="width:44px; height:68px; margin-bottom:10px; position:relative; display:flex; flex-direction:column; justify-content:flex-end;">
+              <div style="background:var(--bain-red); height:14%;"></div>
+              <div style="background:rgba(255,255,255,0.18); height:54%;"></div>
+            </div>
+            <div style="font-size:15px; font-weight:700; color:var(--engine-blue);">This is where you defend.</div>
+          </div>
+
+          <!-- LR: Open Doors -->
+          <div style="padding:24px; min-height:180px; display:flex; flex-direction:column; align-items:center; justify-content:center; text-align:center;">
+            <div style="font-size:15px; font-weight:700; color:#fff; margin-bottom:2px;">Spending compresses:</div>
+            <div style="font-size:15px; font-weight:700; color:#fff; margin-bottom:14px;">Open doors</div>
+            <div style="width:44px; height:68px; margin-bottom:10px; position:relative; display:flex; flex-direction:column; justify-content:flex-end;">
+              <div style="background:var(--bain-red); height:8%;"></div>
+              <div style="background:rgba(255,255,255,0.18); height:48%;"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- X-axis -->
+        <div style="display:grid; grid-template-columns:60px 1fr; margin-top:10px;">
+          <div></div>
+          <div style="display:flex; justify-content:space-between; align-items:center;">
+            <span style="font-size:11px; color:rgba(255,255,255,0.4); line-height:1.3;">Low AI<br>penetration</span>
+            <div style="display:flex; align-items:center; gap:8px;">
+              <span style="font-size:15px; font-weight:700; color:#fff;">Potential for AI to penetrate the SaaS workflow</span>
+              <div class="fw-plus-btn" onclick="toggleFwPopup(this)" style="position:relative; display:inline-flex;">
+                <div style="width:24px; height:24px; border-radius:50%; background:var(--bain-red); color:#fff; display:flex; align-items:center; justify-content:center; font-size:16px; font-weight:700; cursor:pointer; user-select:none; line-height:1; padding-bottom:1px;">+</div>
+                <div class="fw-popup" style="display:none; position:absolute; bottom:32px; right:0; background:#111; border:1px solid rgba(255,255,255,0.2); border-radius:6px; padding:14px 16px; width:260px; z-index:10; font-size:11px; color:rgba(255,255,255,0.7); line-height:1.6;">
+                  <div style="font-weight:700; color:#fff; margin-bottom:6px;">When can AI penetrate the workflow?</div>
+                  &bull; High external visibility of SaaS<br>&bull; Robust industry standards<br>&bull; Limited proprietary data depth<br>&bull; Low switching/network costs<br>&bull; Fewer regulatory certifications<br>&bull; High agent-protocol maturity
+                </div>
+              </div>
+            </div>
+            <span style="font-size:11px; color:rgba(255,255,255,0.4); text-align:right; line-height:1.3;">High AI<br>penetration</span>
+          </div>
+        </div>
+      </div>
+
+      <div style="font-size:10px; color:rgba(255,255,255,0.25); margin-top:16px; text-align:center;">Adapted from Bain Technology Report 2025</div>
+    </div>
+
+    <!-- WHERE ENVERUS SITS -->
+    <div class="fade-in" style="margin-top:48px;">
+      <h3 style="font-size:20px; font-weight:700; color:#fff; margin-bottom:8px;">Where Enverus sits today</h3>
+      <p style="font-size:14px; color:rgba(255,255,255,0.6); margin-bottom:24px;">Enverus's portfolio spans multiple quadrants. Most of the highest-value products sit in the upper left. The work is making sure they stay there and moving the rest of the portfolio in the right direction.</p>
+
+      <div style="max-width:860px; margin:0 auto; display:grid; grid-template-columns:1fr 1fr; gap:6px;">
+        <!-- UL: Gold Mines - Enverus -->
+        <div style="padding:28px; background:rgba(76,175,80,0.12); border:1px solid rgba(76,175,80,0.3); border-radius:6px;">
+          <div style="font-size:13px; font-weight:700; color:var(--grow-green); text-transform:uppercase; letter-spacing:1px; margin-bottom:8px;">GOLD MINES = GROW THE CORE</div>
+          <div style="font-size:13px; color:rgba(255,255,255,0.55); line-height:1.5; margin-bottom:14px;">Proprietary data + high automation potential. Build end-to-end AI agents, shift to outcome-based pricing.</div>
+          <div style="display:flex; flex-wrap:wrap; gap:6px;">
+            <span style="background:var(--grow-green); color:#fff; font-size:11px; font-weight:700; padding:5px 12px; border-radius:12px;">EAC Analytics</span>
+            <span style="background:var(--grow-green); color:#fff; font-size:11px; font-weight:700; padding:5px 12px; border-radius:12px;">EAC/ENA Cost Optimization</span>
+            <span style="background:var(--grow-green); color:#fff; font-size:11px; font-weight:700; padding:5px 12px; border-radius:12px;">Pearl Street</span>
+          </div>
+        </div>
+        <!-- UR: Battlegrounds - Enverus -->
+        <div style="padding:28px; background:rgba(255,107,107,0.1); border:1px solid rgba(255,107,107,0.3); border-radius:6px;">
+          <div style="font-size:13px; font-weight:700; color:var(--bain-red); text-transform:uppercase; letter-spacing:1px; margin-bottom:8px;">BATTLEGROUNDS = BUILD &ldquo;ENGINE TWO&rdquo;</div>
+          <div style="font-size:13px; color:rgba(255,255,255,0.55); line-height:1.5; margin-bottom:14px;">Don't just defend these - build what replaces them. These are the most exposed products and the biggest opportunity for new offerings.</div>
+          <div style="display:flex; flex-wrap:wrap; gap:6px;">
+            <span style="background:var(--bain-red); color:#fff; font-size:11px; font-weight:700; padding:5px 12px; border-radius:12px;">Portions of PET</span>
+            <span style="background:var(--bain-red); color:#fff; font-size:11px; font-weight:700; padding:5px 12px; border-radius:12px;">Basic Data Structuring</span>
+          </div>
+        </div>
+        <!-- LL: Core Strongholds - Enverus -->
+        <div style="padding:28px; background:rgba(100,149,237,0.1); border:1px solid rgba(100,149,237,0.3); border-radius:6px;">
+          <div style="font-size:13px; font-weight:700; color:var(--engine-blue); text-transform:uppercase; letter-spacing:1px; margin-bottom:8px;">CORE STRONGHOLDS = DEFEND THE CORE</div>
+          <div style="font-size:13px; color:rgba(255,255,255,0.55); line-height:1.5; margin-bottom:14px;">Deep domain knowledge + regulatory complexity. Use AI to boost productivity, protect the unique data.</div>
+          <div style="display:flex; flex-wrap:wrap; gap:6px;">
+            <span style="background:var(--engine-blue); color:#fff; font-size:11px; font-weight:700; padding:5px 12px; border-radius:12px;">ENA Transactions</span>
+            <span style="background:var(--engine-blue); color:#fff; font-size:11px; font-weight:700; padding:5px 12px; border-radius:12px;">Oil &amp; Gas Land &amp; Title</span>
+          </div>
+        </div>
+        <!-- LR: Open Doors - Enverus -->
+        <div style="padding:28px; background:rgba(255,255,255,0.03); border:1px solid rgba(255,255,255,0.1); border-radius:6px;">
+          <div style="font-size:13px; font-weight:700; color:rgba(255,255,255,0.45); text-transform:uppercase; letter-spacing:1px; margin-bottom:8px;">OPEN DOORS = RAISE SWITCHING COSTS</div>
+          <div style="font-size:13px; color:rgba(255,255,255,0.4); line-height:1.5; margin-bottom:14px;">Spending compresses. Third-party agents can hook in. Must deepen integrations and lock in workflows.</div>
+          <div style="display:flex; flex-wrap:wrap; gap:6px;">
+            <span style="background:rgba(255,255,255,0.12); color:rgba(255,255,255,0.5); font-size:11px; font-weight:700; padding:5px 12px; border-radius:12px;">Commodity Pricing Feeds</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 2: PILLARS -->
+<section id="pillars" class="section">
+  <h2 class="fade-in" style="font-size:28px; font-weight:700; margin-bottom:8px;">Three Strategic Imperatives</h2>
+  <p class="pillar-intro fade-in" style="max-width:none;">Each imperative carries critical questions, and the world will keep generating new ones.</p>
+  <div class="fade-in" style="font-size:16px; line-height:1.7; color:var(--text); padding:20px 24px; margin-bottom:32px; background:var(--off-white); border-left:3px solid var(--bain-red); border-radius:0 var(--card-radius) var(--card-radius) 0;">
+    As energy and AI continue to evolve, Bain brings deep primary research, a proprietary expert network, and AI tools to help answer them fast. Some of the highest-value work is getting the right answer to a strategic question quickly, especially when it shapes an M&A decision or a portfolio bet. Our role: help answer these questions, start acting on the ones we can already see, and <strong>translate those answers into sized, prioritized initiatives.</strong>
+  </div>
+
+  <div class="pillar-tabs fade-in">
+    <button class="pillar-tab active" data-pillar="grow">
+      <span class="pillar-tab-num">Imperative 1</span>
+      Grow the Core
+    </button>
+    <button class="pillar-tab" data-pillar="defend">
+      <span class="pillar-tab-num">Imperative 2</span>
+      Defend the Core
+    </button>
+    <button class="pillar-tab" data-pillar="engine">
+      <span class="pillar-tab-num">Imperative 3</span>
+      Build &ldquo;Engine Two&rdquo;
+    </button>
+  </div>
+
+  <!-- DEFEND THE CORE -->
+  <div class="pillar-content defend" data-pillar="defend">
+    <div class="pillar-header">
+      <div class="pillar-framing">
+        <h3 style="font-size:20px; font-weight:700; margin-bottom:12px;">How does Enverus protect its existing revenue base?</h3>
+        <p>Enverus has real proprietary assets: EAC's curated L48 well-level data, ENA's two-sided network effects, deep workflow integration across thousands of customers. But AI disruption and new competitors are putting pressure on every line of the business. The product portfolio needs to get more defensible: built around what's truly proprietary, workflow-embedded, hard to rip out.</p>
+      </div>
+    </div>
+
+    <div class="questions-section">
+      <div class="questions-header">Questions We'd Start With</div>
+      <div style="font-size:13px; font-style:italic; color:var(--text-muted); margin-bottom:12px;">Starting points from our diligence work. We'd refine these with your team in week one.</div>
+      <ul class="question-list" id="defend-questions"></ul>
+    </div>
+  </div>
+
+  <!-- GROW THE CORE -->
+  <div class="pillar-content active grow" data-pillar="grow">
+    <div class="pillar-header">
+      <div class="pillar-framing">
+        <h3 style="font-size:20px; font-weight:700; margin-bottom:12px;">How does Enverus accelerate to 20% revenue growth?</h3>
+        <p>20% top-line growth doesn't happen by doing what you're already doing a little better. It requires shipping products faster, evolving commercial models toward value-based pricing, growing Power meaningfully above 20%, locking in utility logos post-SBS, and finding new ways to monetize ENA's $500B transaction network.</p>
+      </div>
+    </div>
+
+    <div class="questions-section">
+      <div class="questions-header">Questions We'd Start With</div>
+      <div style="font-size:13px; font-style:italic; color:var(--text-muted); margin-bottom:12px;">Starting points from our diligence work. We'd refine these with your team in week one.</div>
+      <ul class="question-list" id="grow-questions"></ul>
+    </div>
+  </div>
+
+  <!-- ENGINE TWO -->
+  <div class="pillar-content engine" data-pillar="engine">
+    <div class="pillar-header">
+      <div class="pillar-framing">
+        <h3 style="font-size:20px; font-weight:700; margin-bottom:12px;">What new businesses must Enverus build for 2035?</h3>
+        <p>Geopolitical shifts, policy volatility, and the rise of AI-native competitors mean Enverus cannot rely on its current portfolio alone. The data advantage is real: $500B in transaction data, proprietary well-level information, decades of domain knowledge in upstream E&amp;P and land transactions. The question is what new businesses can be built on top of it, and which ones to pursue through build vs. buy.</p>
+        <p style="margin-top:12px;">This is also where <strong>M&A diligence</strong> fits naturally. With multiple near-term targets in the pipeline, the retainer team can support commercial diligence and help size the cost and revenue overlap at lower cost than a standalone diligence. We've already been inside the financials, the product portfolio, and the competitive set.</p>
+      </div>
+    </div>
+
+    <div class="questions-section">
+      <div class="questions-header">Questions We'd Start With</div>
+      <div style="font-size:13px; font-style:italic; color:var(--text-muted); margin-bottom:12px;">Starting points from our diligence work. We'd refine these with your team in week one.</div>
+      <ul class="question-list" id="engine-questions"></ul>
+    </div>
+  </div>
+
+  <!-- How We Answer → How We Act bridge -->
+  <div class="fade-in" style="margin-top:56px; padding-top:40px; border-top:1px solid var(--border);">
+    <h3 style="font-size:20px; font-weight:700; margin-bottom:24px;">From Questions to Initiatives</h3>
+    <div class="bridge-grid" style="display:grid; grid-template-columns:1fr auto 1fr auto 1fr; gap:0; align-items:center;">
+      <div style="padding:24px; background:var(--off-white); border:1px solid var(--border); border-radius:var(--card-radius); text-align:center;">
+        <div style="font-size:12px; font-weight:700; text-transform:uppercase; letter-spacing:1px; color:var(--text-muted); margin-bottom:8px;">Step 1</div>
+        <div style="font-size:15px; font-weight:600; margin-bottom:6px;">Answer the big questions</div>
+        <div style="font-size:13px; color:var(--text-light); line-height:1.6;">Data-backed analysis using primary research, expert interviews, competitive intelligence, and proprietary data</div>
+      </div>
+      <div style="font-size:24px; color:var(--text-muted); padding:0 12px;">&#8594;</div>
+      <div style="padding:24px; background:var(--off-white); border:1px solid var(--border); border-radius:var(--card-radius); text-align:center;">
+        <div style="font-size:12px; font-weight:700; text-transform:uppercase; letter-spacing:1px; color:var(--text-muted); margin-bottom:8px;">Step 2</div>
+        <div style="font-size:15px; font-weight:600; margin-bottom:6px;">Turn answers into initiatives</div>
+        <div style="font-size:13px; color:var(--text-light); line-height:1.6;">Size the opportunities. Name the owners. Set the timeline.</div>
+      </div>
+      <div style="font-size:24px; color:var(--text-muted); padding:0 12px;">&#8594;</div>
+      <div style="padding:24px; background:var(--off-white); border:1px solid var(--border); border-radius:var(--card-radius); text-align:center;">
+        <div style="font-size:12px; font-weight:700; text-transform:uppercase; letter-spacing:1px; color:var(--text-muted); margin-bottom:8px;">Step 3</div>
+        <div style="font-size:15px; font-weight:600; margin-bottom:6px;">Execute side-by-side</div>
+        <div style="font-size:13px; color:var(--text-light); line-height:1.6;">Drive initiatives through the hopper until value shows up in the P&L</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 2B: HEAD START -->
+<section id="headstart" class="section section-dark">
+  <div class="section-inner">
+    <h2 class="fade-in" style="font-size:28px; font-weight:700; margin-bottom:8px;">We Already Have a Head Start</h2>
+    <p class="fade-in" style="font-size:16px; line-height:1.7; color:rgba(255,255,255,0.75); margin-bottom:16px;">
+      From the diligence last year, we've already identified and sized 15-20 potential initiatives across these three imperatives. Some of these are ready to move now. We'd start both tracks in parallel - acting on what's clear while building the case for the bigger bets.
+    </p>
+    <p class="fade-in" style="font-size:16px; line-height:1.7; color:rgba(255,255,255,0.75); margin-bottom:40px;">
+      Our outside-in sizing shows <strong style="color:#fff;">$250M+ in EBITDA at stake</strong> across the initiatives we've identified so far, exclusive of M&A and the payments opportunity, which could be significantly larger.
+    </p>
+
+    <div class="pillar-tabs fade-in" style="border-color:rgba(255,255,255,0.15);">
+      <button class="pillar-tab active" data-pillar="hs-grow">
+        <span class="pillar-tab-num">Grow</span>
+        Revenue & Commercial
+      </button>
+      <button class="pillar-tab" data-pillar="hs-defend">
+        <span class="pillar-tab-num">Defend</span>
+        Margin & Cost
+      </button>
+      <button class="pillar-tab" data-pillar="hs-engine">
+        <span class="pillar-tab-num">Build &ldquo;Engine Two&rdquo;</span>
+        New Business & M&A
+      </button>
+    </div>
+
+    <div class="pillar-content active" data-pillar="hs-grow" style="display:block;">
+      <div class="initiative-grid" id="grow-initiatives" style="margin-top:24px;"></div>
+    </div>
+    <div class="pillar-content" data-pillar="hs-defend">
+      <div class="initiative-grid" id="defend-initiatives" style="margin-top:24px;"></div>
+    </div>
+    <div class="pillar-content" data-pillar="hs-engine">
+      <div class="initiative-grid" id="engine-initiatives" style="margin-top:24px;"></div>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 3: HOPPER -->
+<section id="hopper" class="section" style="background:#fff;">
+  <div class="hopper-intro fade-in">
+    <div class="hopper-intro-text">
+      <h2 style="font-size:28px; font-weight:700; margin-bottom:8px;">The Hopper: From Initiatives to Realized Value</h2>
+      <p>Initiatives go through a pipeline: sized, validated, assigned an owner, driven to execution. Quick wins get fast-tracked. The hopper gets restacked weekly as priorities shift.</p>
+    </div>
+    <button class="simulate-btn" onclick="simulateSprint()">Simulate Initiative Progress</button>
+  </div>
+
+  <div class="fade-in" style="font-size:12px; font-weight:700; text-transform:uppercase; letter-spacing:1.5px; color:var(--grow-green); margin-bottom:8px;">Quick wins fast-tracked from day one</div>
+  <div class="timeline-bar fade-in">
+    <div class="timeline-segment">
+      <span class="timeline-segment-label">Weeks 1-4</span>
+      Fill hopper &amp; prioritize
+    </div>
+    <div class="timeline-segment">
+      <span class="timeline-segment-label">Weeks 4-6</span>
+      Top initiatives to line-of-sight
+    </div>
+    <div class="timeline-segment">
+      <span class="timeline-segment-label">Month 2-3</span>
+      Execution begins
+    </div>
+    <div class="timeline-segment">
+      <span class="timeline-segment-label">Month 3+</span>
+      P&amp;L impact visible
+    </div>
+  </div>
+
+  <!-- Stage Definitions -->
+  <div class="fade-in stage-defs" style="display:grid; grid-template-columns:repeat(4,1fr); gap:16px; margin-bottom:24px;">
+    <div style="padding:16px; background:var(--off-white); border:1px solid var(--border); border-radius:var(--card-radius);">
+      <div style="font-size:12px; font-weight:700; color:var(--text); margin-bottom:6px;">Idea Generation</div>
+      <div style="font-size:12px; color:var(--text-light); line-height:1.6;">Long list of ideas with estimated "size of prize." Ranked by how much each is worth, how fast it can happen, and whether Enverus can actually do it.</div>
+    </div>
+    <div style="padding:16px; background:var(--off-white); border:1px solid var(--border); border-radius:var(--card-radius);">
+      <div style="font-size:12px; font-weight:700; color:var(--text); margin-bottom:6px;">Line-of-Sight</div>
+      <div style="font-size:12px; color:var(--text-light); line-height:1.6;">Data supports value and provides specificity on sources. Key drivers identified and sized. Sponsor/owner named.</div>
+    </div>
+    <div style="padding:16px; background:var(--off-white); border:1px solid var(--border); border-radius:var(--card-radius);">
+      <div style="font-size:12px; font-weight:700; color:var(--text); margin-bottom:6px;">Planned</div>
+      <div style="font-size:12px; color:var(--text-light); line-height:1.6;">Detailed plan with actions, owners, and timing. Finance has signed off on the numbers. We're tracking progress, and we've got a plan for what could go wrong.</div>
+    </div>
+    <div style="padding:16px; background:var(--off-white); border:1px solid var(--border); border-radius:var(--card-radius);">
+      <div style="font-size:12px; font-weight:700; color:var(--text); margin-bottom:6px;">Executed</div>
+      <div style="font-size:12px; color:var(--text-light); line-height:1.6;">Execution underway. Savings visible in the P&amp;L. Results delivered.</div>
+    </div>
+  </div>
+
+  <div class="kanban fade-in" id="kanban"></div>
+</section>
+
+<!-- SECTION 4: DIFFERENTIATORS -->
+<section id="differentiators" class="section">
+  <h2 class="fade-in" style="font-size:28px; font-weight:700; margin-bottom:8px;">Why This Is Different</h2>
+  <p class="fade-in" style="font-size:15px; color:var(--text-light); margin-bottom:40px;">A dedicated team, embedded with yours, focused on P&amp;L results. Not a final deck.</p>
+
+  <div class="diff-grid fade-in">
+    <div class="diff-card">
+      <div class="diff-card-header">Strategy + Execution</div>
+      <div class="diff-before">
+        <div class="diff-before-label">What you've seen</div>
+        <p>A fixed-scope project with a defined end date. Recommendations delivered, team rolls off, and the hard work of execution falls entirely on the client.</p>
+      </div>
+      <div class="diff-after">
+        <div class="diff-after-label">What we do</div>
+        <p>A dedicated team that sits side-by-side with yours. We restack priorities weekly, put names and dollar targets on every initiative, and stay until results show up in the numbers.</p>
+      </div>
+    </div>
+
+    <div class="diff-card">
+      <div class="diff-card-header">AI-Native, Not AI-Curious</div>
+      <div class="diff-before">
+        <div class="diff-before-label">What you've seen</div>
+        <p>Consultants who use PowerPoint to tell you about AI. Generic frameworks. Recommendations that don't account for how fast the technology moves.</p>
+      </div>
+      <div class="diff-after">
+        <div class="diff-after-label">What we do</div>
+        <p>Your team knows data and technology. We bring the expert network, competitive intel, and AI tools to move faster than your team can alone. They're busy running the business. The goal is to help your people move on what they already see, not sit through another AI 101.</p>
+      </div>
+    </div>
+
+    <div class="diff-card">
+      <div class="diff-card-header">Challenge, Don't Rubber-Stamp</div>
+      <div class="diff-before">
+        <div class="diff-before-label">What you've seen</div>
+        <p>Spend months confirming what management already believes. Report back what they told you. Deliver findings nobody disagrees with and nobody acts on.</p>
+      </div>
+      <div class="diff-after">
+        <div class="diff-after-label">What we do</div>
+        <p>We approach every decision as if it were our own money (and as coinvestors, it is). That means rigorous skepticism on the bad ideas and aggressive acceleration on the good ones. We'll tell you what we really think, not what we think you want to hear. The goal is 20% growth, and the fastest path there requires killing things that won't work just as fast as we pursue the ones that will.</p>
+      </div>
+    </div>
+
+    <div class="diff-card">
+      <div class="diff-card-header">Speed to Answers</div>
+      <div class="diff-before">
+        <div class="diff-before-label">What you've seen</div>
+        <p>Wait 6-8 weeks for a final deck that answers the questions you had at kickoff. By then the questions have changed.</p>
+      </div>
+      <div class="diff-after">
+        <div class="diff-after-label">What we do</div>
+        <p>Bain's expert network, competitive intelligence, and AI tools let us turn around answers quickly. We work on your highest-priority questions first, and keep going. Some answers become initiatives. Some inform an M&A call. Some just give leadership the confidence to move.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="aaa-section fade-in">
+    <h3 style="font-size:20px; font-weight:700; margin-bottom:12px;">What Our Team Does</h3>
+    <p style="font-size:15px; color:var(--text-light); margin-bottom:32px;">Across every initiative, our team focuses on three things:</p>
+    <div class="aaa-grid">
+      <div class="aaa-card assure">
+        <div class="aaa-card-title">Assure Realization</div>
+        <p>Stress-test what's already underway. Check whether the numbers hold up and the right people own it. If something is off track, flag it early.</p>
+      </div>
+      <div class="aaa-card amplify">
+        <div class="aaa-card-title">Amplify Value</div>
+        <p>Identify the opportunities nobody has sized yet. Challenge assumptions on the ones already in the plan. Find more profit than the current roadmap expects.</p>
+      </div>
+      <div class="aaa-card accelerate">
+        <div class="aaa-card-title">Accelerate Delivery</div>
+        <p>Bain on the ground with subject matter experts and AI tooling. Extra hands when a workstream stalls. Get results faster than your team could get there alone.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 5: COMMERCIAL -->
+<section id="commercial" class="section" style="background:#fff;">
+  <h2 class="fade-in" style="font-size:28px; font-weight:700; margin-bottom:8px;">How We'd Work Together</h2>
+  <p class="fade-in" style="font-size:15px; color:var(--text-light); margin-bottom:40px;">A dedicated Bain team inside Enverus. You set the priorities; we flex to match.</p>
+
+  <div class="pricing-grid fade-in" id="pricing-grid"></div>
+
+  <div class="fade-in" style="margin-top:-32px; margin-bottom:56px; padding:20px 28px; background:var(--off-white); border:1px solid var(--border); border-radius:var(--card-radius);">
+    <div style="font-size:12px; font-weight:700; text-transform:uppercase; letter-spacing:1px; color:var(--text-muted); margin-bottom:6px;">ROI Perspective</div>
+    <div style="font-size:14px; line-height:1.7; color:var(--text);">The math is simple: if this team pulls forward even one $25M initiative by six months, the retainer pays for itself. M&A diligence runs at a fraction of standalone costs because we already know the business.</div>
+  </div>
+
+  <div class="collab-section fade-in">
+    <h3 style="font-size:20px; font-weight:700; margin-bottom:12px;">Weekly Rhythm</h3>
+    <p>Priorities set by Enverus, executed by the dedicated team, reviewed weekly with leadership visibility.</p>
+    <div class="collab-grid">
+      <div class="collab-step">
+        <div class="collab-step-num">1</div>
+        <div class="collab-step-title">Requests received</div>
+        <div class="collab-step-desc">Initiative leads surface priorities and new requests to the Bain team</div>
+      </div>
+      <div class="collab-step">
+        <div class="collab-step-num">2</div>
+        <div class="collab-step-title">Bain triages</div>
+        <div class="collab-step-desc">Team triages priorities and proposes an updated workplan for the week</div>
+      </div>
+      <div class="collab-step">
+        <div class="collab-step-num">3</div>
+        <div class="collab-step-title">Sponsor approves</div>
+        <div class="collab-step-desc">Retainer sponsor reviews, revises, and approves the plan</div>
+      </div>
+      <div class="collab-step">
+        <div class="collab-step-num">4</div>
+        <div class="collab-step-title">Execute & track value</div>
+        <div class="collab-step-desc">Drive progress on the top initiatives. Weekly updates to the ELT: what got done, what changed, what's next</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="gantt-section fade-in">
+    <h4>Illustrative Workstream Timeline</h4>
+    <table class="gantt-table">
+      <thead>
+        <tr>
+          <th>Workstream</th>
+          <th>Month 1</th><th>Month 2</th><th>Month 3</th><th>Month 4</th><th>Month 5</th><th>Month 6</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Hopper build &amp; sizing</td>
+          <td><span class="gantt-bar vc"></span></td>
+          <td><span class="gantt-bar vc half"></span></td>
+          <td></td><td></td><td></td><td></td>
+        </tr>
+        <tr>
+          <td>AI strategy sprint</td>
+          <td></td>
+          <td><span class="gantt-bar ai"></span></td>
+          <td><span class="gantt-bar ai"></span></td>
+          <td><span class="gantt-bar ai half"></span></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>Value creation initiatives</td>
+          <td></td>
+          <td></td>
+          <td><span class="gantt-bar vc"></span></td>
+          <td><span class="gantt-bar vc"></span></td>
+          <td><span class="gantt-bar vc"></span></td>
+          <td><span class="gantt-bar vc"></span></td>
+        </tr>
+        <tr>
+          <td>SBS integration support</td>
+          <td></td>
+          <td><span class="gantt-bar vc half"></span></td>
+          <td><span class="gantt-bar vc"></span></td>
+          <td><span class="gantt-bar vc"></span></td>
+          <td><span class="gantt-bar vc half"></span></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>M&A pipeline support</td>
+          <td></td><td></td><td></td>
+          <td><span class="gantt-bar ma"></span></td>
+          <td><span class="gantt-bar ma"></span></td>
+          <td><span class="gantt-bar ma"></span></td>
+        </tr>
+      </tbody>
+    </table>
+    <div style="display:flex; gap:24px; margin-top:12px; font-size:11px; color:var(--text-muted);">
+      <span><span class="gantt-bar ai" style="display:inline-block;width:12px;height:12px;vertical-align:middle;margin-right:4px;"></span> AI strategy</span>
+      <span><span class="gantt-bar vc" style="display:inline-block;width:12px;height:12px;vertical-align:middle;margin-right:4px;"></span> Value creation</span>
+      <span><span class="gantt-bar ma" style="display:inline-block;width:12px;height:12px;vertical-align:middle;margin-right:4px;"></span> M&A support</span>
+    </div>
+  </div>
+
+  <div class="team-section fade-in">
+    <h3 style="font-size:20px; font-weight:700; margin-bottom:12px;">Your Team</h3>
+    <div id="team-grid" style="display:grid; grid-template-columns:repeat(3,1fr); gap:24px;"></div>
+  </div>
+
+  <div class="next-steps fade-in">
+    <h3 style="font-size:20px; font-weight:700; margin-bottom:12px;">Next Steps</h3>
+    <ol>
+      <li>Sit down with Enverus leadership. Agree on the questions that matter most and how we'll work together.</li>
+      <li>Answer those questions with real research: expert calls, competitive analysis, customer data. Turn the answers into a ranked list of moves with dollar values attached (Weeks 1-4).</li>
+      <li>Start executing on the top priorities and get results into the numbers (Month 2+).</li>
+    </ol>
+  </div>
+</section>
+
+</main>
+
+<!-- ========== DATA ========== -->
+<script>
+const PROPOSAL_DATA = {
+  pillars: {
+    defend: {
+      questions: [
+        "Which 3-5 products are most exposed to AI disruption, and what's the revenue at risk in the next 18 months?",
+        "Where is AI going to shrink the TAM vs. grow it? What's the net exposure by BU?",
+        "Can AI leapfrog traditional cost-out steps like offshoring, and what does that mean for the margin roadmap?",
+        "How does Enverus maintain pricing power (4-6% escalators) when AI is changing what customers think a seat is worth?",
+        "How do we use AI to boost productivity in ENA Transactions, Land & Title, and Regulatory without exposing proprietary data?"
+      ],
+      initiatives: [
+        { id: "offshoring", name: "Offshoring / low-cost labor", bu: "Cross-BU", buClass: "cross", ebitda: "$125M+", ebitdaDetail: "7.1% EBITDA margin uplift", urgency: "Mid-term", urgencyClass: "mid", sizing: "Reach 50%+ low-cost labor vs. 31% today via attrition", activities: "Assess current labor footprint, identify roles suitable for offshore transition, develop migration timeline", owner: "COO" },
+        { id: "pricing", name: "Pricing optimization", bu: "EAC", buClass: "eac", ebitda: "$12-20M", ebitdaDetail: "4-6% EAC revenue increase", urgency: "Near-term", urgencyClass: "near", sizing: "Maintain and refine 4-6% escalators on EAC pricing", activities: "Price realization audit, escalator enforcement, value-based pricing analysis", owner: "CRO" },
+        { id: "ai-backoffice", name: "AI back-office optimization", bu: "Cross-BU", buClass: "cross", ebitda: "$21M+", ebitdaDetail: "1.2% EBITDA margin uplift", urgency: "Mid-term", urgencyClass: "mid", sizing: "Use AI to reduce G&A and support costs", activities: "Identify highest-ROI automation use cases, build business cases, pilot and scale", owner: "CTO" },
+        { id: "ai-data", name: "AI data cleansing", bu: "Cross-BU", buClass: "cross", ebitda: "$9M+", ebitdaDetail: "0.5% EBITDA margin uplift", urgency: "Mid-term", urgencyClass: "mid", sizing: "Replace portion of $18M data cleansing headcount with AI tools", activities: "Evaluate AI data quality tools, pilot on highest-volume data streams, measure accuracy vs. human baseline", owner: "CDO" },
+        { id: "rationalize", name: "Rationalize product portfolio", bu: "Cross-BU", buClass: "cross", ebitda: "TBD", ebitdaDetail: "Discontinue low-margin/non-strategic solutions", urgency: "Mid-term", urgencyClass: "mid", sizing: "Identify products below margin threshold or without strategic fit", activities: "Product-level P&L analysis, customer overlap assessment, sunset planning", owner: "CPO" },
+        { id: "cloud", name: "Cloud infrastructure optimization", bu: "Cross-BU", buClass: "cross", ebitda: "<$10M", ebitdaDetail: "Optimize $17M cloud spend", urgency: "Near-term", urgencyClass: "near", sizing: "Optimize $17M cloud spend across AWS, Azure, etc.", activities: "Cloud spend audit, right-sizing, reserved instance strategy, FinOps implementation", owner: "CTO" },
+        { id: "procurement", name: "Indirect procurement", bu: "Cross-BU", buClass: "cross", ebitda: "$8-9M", ebitdaDetail: "0.5% EBITDA margin uplift", urgency: "Near-term", urgencyClass: "near", sizing: "Optimize $60M in indirect procurement spend", activities: "Category analysis, vendor consolidation, renegotiation of key contracts", owner: "CFO" },
+        { id: "ai-products", name: "AI-enabled product enhancements", bu: "Cross-BU", buClass: "cross", ebitda: "TBD", ebitdaDetail: "Price increase from GenAI features", urgency: "Mid-term", urgencyClass: "mid", sizing: "Develop AI workflows in existing products to reduce manual effort and increase willingness to pay", activities: "Identify highest-value AI features by segment, prototype, test with key accounts", owner: "CPO" },
+        { id: "d-discover-1", name: "Defensibility audit by product", bu: "TBD", buClass: "cross", ebitda: "TBD", ebitdaDetail: "To be sized during engagement", urgency: "Discovery", urgencyClass: "mid", sizing: "Map each product's proprietary data depth and switching costs to assess true defensibility", activities: "To be defined based on strategic question findings", owner: "TBD", discovery: true }
+      ]
+    },
+    grow: {
+      questions: [
+        "How do we get product launches to happen 90% faster, driven by customer needs rather than internal roadmaps?",
+        "Where can pricing evolve from seat-based to value-based? Which segments and products are best suited?",
+        "What's the path to locking in every utility logo post-SBS, and what adjacencies keep the growth going after that?",
+        "How do we monetize ENA's $500B transaction network beyond O&G: transaction insights, purchasing behavior data, new verticals?",
+        "What is the full potential of payments monetization across ENA's flow? Which 2-3 opportunities move first?",
+        "Power needs to grow meaningfully above 20%. What new products fill portfolio gaps, and where do we expand?"
+      ],
+      initiatives: [
+        { id: "payments", name: "Payments monetization", bu: "ENA", buClass: "ena", ebitda: "$50-150M+", ebitdaDetail: "~$500B in annual transaction flow through ENA (OpenInvoice, OpenTicket, RFx, royalty, JIB), largely unmonetized today. Even at 1-3 bps across lending, payment processing, and working capital products, this represents $50-150M+ in potential annual revenue. The range is wide because it depends on which monetization model Enverus pursues. Narrowing this is a Week 1-2 priority. We have a detailed payments proposal that could be part of the retainer or run as a separate engagement.", urgency: "Mid-term", urgencyClass: "mid", sizing: "Monetize pass-through payments via embedded lending, working capital, and payment processing. Current conviction shifting toward embedded lending / royalty cash advance as primary opportunity.", activities: "Map and size full opportunity across ENA networks by product type, assess willingness to pay, benchmark analogues (Zelis, AvidXchange, TriumphPay), design monetization and partnership model", owner: "GM ENA" },
+        { id: "analytics-upsell", name: "Data analytics upsell", bu: "EAC", buClass: "eac", ebitda: "$10-20M", ebitdaDetail: "$1-5M penetration + $10-15M value-based pricing", urgency: "Near-term", urgencyClass: "near", sizing: "Upsell data analytics, increase penetration and value-based pricing by 5% each", activities: "CVX case study replication, segment-level pricing analysis, sales enablement", owner: "CRO" },
+        { id: "pearl-street", name: "Pearl Street & new products", bu: "PET", buClass: "pet", ebitda: "$10-20M", ebitdaDetail: "Accelerated Pearl Street growth", urgency: "Mid-term", urgencyClass: "mid", sizing: "Drive penetration of new product plays with a focus on Pearl Street", activities: "Product-market fit validation, go-to-market acceleration, customer feedback integration", owner: "GM PET" },
+        { id: "sow-expand", name: "Expand scope with existing customers", bu: "ENA", buClass: "ena", ebitda: "$5-10M", ebitdaDetail: "5% increase in modules per customer", urgency: "Near-term", urgencyClass: "near", sizing: "Expand ENA module penetration across existing clients by 5%", activities: "Customer whitespace analysis, cross-sell playbook, account manager enablement", owner: "CRO" },
+        { id: "iou-accel", name: "Commercial acceleration with IOUs", bu: "PET", buClass: "pet", ebitda: "$5-10M", ebitdaDetail: "10-15% IOU penetration growth", urgency: "Near-term", urgencyClass: "near", sizing: "Increase sales focus and conversion with IOUs for 10-15% penetration growth", activities: "IOU account prioritization, dedicated sales motion, product packaging for utility buyers", owner: "GM PET" },
+        { id: "ena-pet-xsell", name: "ENA-to-PET cross-sell", bu: "Cross-BU", buClass: "cross", ebitda: "<$10M", ebitdaDetail: "Expand ENA to PET customer base", urgency: "Mid-term", urgencyClass: "mid", sizing: "Use ENA's network to introduce PET capabilities to upstream customers", activities: "Customer overlap mapping, bundling strategy, joint sales motions", owner: "CRO" },
+        { id: "g-discover-1", name: "SBS integration cross-sell", bu: "TBD", buClass: "cross", ebitda: "TBD", ebitdaDetail: "To be sized during engagement", urgency: "Discovery", urgencyClass: "mid", sizing: "Identify cross-sell opportunities unlocked by SBS integration", activities: "To be defined based on strategic question findings", owner: "TBD", discovery: true },
+        { id: "g-discover-2", name: "Sales force effectiveness", bu: "TBD", buClass: "cross", ebitda: "TBD", ebitdaDetail: "To be sized during engagement", urgency: "Discovery", urgencyClass: "mid", sizing: "Assess commercial capabilities needed for 20% growth and design organizational changes", activities: "To be defined based on strategic question findings", owner: "TBD", discovery: true }
+      ]
+    },
+    engine: {
+      questions: [
+        "What does Enverus need to look like in 2035? Given geopolitical volatility, policy uncertainty, and AI disruption, what is the right long-term portfolio?",
+        "Which AI-native competitors are real threats today, and which are noise? What's the plan for each?",
+        "Which PET products need to be rebuilt as AI-native before competitors replicate them? What does that product look like?",
+        "What new products can Enverus build on its data moat that don't exist today? Where do agentic AI offerings create entirely new markets?",
+        "How does Enverus expand internationally before super-majors switch to less-tailored, more global software alternatives?",
+        "What is the right M&A strategy to build capabilities vs. buy revenue? How should bolt-on acquisitions be sequenced?"
+      ],
+      initiatives: [
+        { id: "supplier-bench", name: "Supplier cost benchmarking", bu: "EAC + ENA", buClass: "eac", ebitda: "$90-130M", ebitdaDetail: "Analytics offering for 4,900 E&P, Midstream, OFS players", urgency: "Mid-term", urgencyClass: "mid", sizing: "Use ENA data to build supplier cost benchmarking database and analytics offering", activities: "Data asset assessment, product design, pilot with anchor customers, pricing model development", owner: "GM EAC" },
+        { id: "op-workflows", name: "Operational workflows expansion", bu: "PET", buClass: "pet", ebitda: "$20-40M", ebitdaDetail: "~20% share of $125-165M vended market", urgency: "Long-term", urgencyClass: "long", sizing: "Expand PET beyond development into operations analytics and capture 20% share", activities: "TAM validation, product requirements, build vs. buy assessment, GTM strategy", owner: "GM PET" },
+        { id: "intl-boltons", name: "International bolt-on acquisitions", bu: "EAC", buClass: "eac", ebitda: "$5-10M", ebitdaDetail: "30% cross-sell potential on $20-25M targets", urgency: "Mid-term", urgencyClass: "mid", sizing: "Acquire players for international scale (e.g., Westwood-type assets)", activities: "Target identification, strategic rationale, integration planning", owner: "Corp Dev" },
+        { id: "ma-platform", name: "Platform M&A / solution expansion", bu: "PET", buClass: "pet", ebitda: "$25-40M", ebitdaDetail: "2-3 acquisitions, 15% cross-sell opportunity", urgency: "Mid-term", urgencyClass: "mid", sizing: "Resolve product-market fit in non-renewables; broaden suite via acquisition", activities: "Pipeline development, target diligence, synergy sizing, integration playbook", owner: "Corp Dev" },
+        { id: "new-modules", name: "New ENA modules (service sector)", bu: "ENA", buClass: "ena", ebitda: "$1-5M", ebitdaDetail: "Extend network into service sector", urgency: "Mid-term", urgencyClass: "mid", sizing: "Build new ENA modules extending the platform down into the service sector", activities: "Market sizing, customer discovery, MVP development, pilot program", owner: "GM ENA" },
+        { id: "agentic", name: "Agentic product roadmap", bu: "Cross-BU", buClass: "cross", ebitda: "TBD", ebitdaDetail: "New agentic AI offerings built on data moat", urgency: "Long-term", urgencyClass: "long", sizing: "Define and build AI-native products that create new markets - automated deal sourcing, trading intelligence, operational automation", activities: "Opportunity identification, prototype development, customer co-creation, competitive moat assessment", owner: "CTO + CPO" },
+        { id: "ai-architecture", name: "AI-first product architecture", bu: "Cross-BU", buClass: "cross", ebitda: "TBD", ebitdaDetail: "To be sized during engagement", urgency: "Discovery", urgencyClass: "mid", sizing: "Redesign most-exposed products (PET Market Reports, basic data structuring) as AI-native before competitors do", activities: "Product-by-product assessment, AI-native design sprints, build vs. acquire decisions", owner: "CPO + CTO", discovery: true },
+        { id: "competitive-response", name: "Competitive response playbook", bu: "TBD", buClass: "cross", ebitda: "TBD", ebitdaDetail: "To be sized during engagement", urgency: "Discovery", urgencyClass: "mid", sizing: "Map emerging AI-native competitors by quadrant and define response strategy for each", activities: "Competitor intelligence, product gap analysis, positioning strategy", owner: "CSO", discovery: true },
+        { id: "e-discover-1", name: "Geographic expansion strategy", bu: "TBD", buClass: "cross", ebitda: "TBD", ebitdaDetail: "To be sized during engagement", urgency: "Discovery", urgencyClass: "long", sizing: "Define international expansion roadmap before super-majors switch to global alternatives", activities: "To be defined based on strategic question findings", owner: "TBD", discovery: true },
+        { id: "e-discover-2", name: "Pipeline diligence targets", bu: "TBD", buClass: "cross", ebitda: "TBD", ebitdaDetail: "Commercial diligence as part of retainer", urgency: "Discovery", urgencyClass: "mid", sizing: "5+ near-term M&A targets in pipeline requiring commercial diligence and synergy sizing", activities: "Diligence support at advantaged retainer rates", owner: "Corp Dev + Bain", discovery: true }
+      ]
+    }
+  },
+  hopper: {
+    stages: ["Idea Generation", "Line-of-Sight", "Planned", "Executed"],
+    sprint: [
+      { id: "payments", from: 0, to: 2 },
+      { id: "pricing", from: 0, to: 2 },
+      { id: "analytics-upsell", from: 0, to: 1 },
+      { id: "cloud", from: 0, to: 1 },
+      { id: "procurement", from: 0, to: 1 },
+      { id: "sow-expand", from: 0, to: 1 },
+      { id: "offshoring", from: 0, to: 1 }
+    ]
+  },
+  commercial: {
+    options: [
+      {
+        name: "Weekly",
+        price: "$280K",
+        period: "per week + 15% expenses",
+        resources: "Manager + 4 Consultants (2 teamlets)",
+        recommended: false,
+        details: [
+          "Sporadic support as needed throughout the year",
+          "Engage on a per-project basis",
+          "Consistent with 2025 diligence team rates"
+        ]
+      },
+      {
+        name: "Monthly (Medium)",
+        price: "$910K",
+        period: "per month + 15% expenses",
+        resources: "Manager + 4 Consultants (2 teamlets)",
+        recommended: false,
+        details: [
+          "25% lower cost vs. weekly rates for same team size",
+          "Consistent volume of work with smaller dedicated team",
+          "Ability to surge additional teamlet at +$115K/wk"
+        ]
+      },
+      {
+        name: "Monthly (Full)",
+        price: "$1.21M",
+        period: "per month + 15% expenses",
+        resources: "Manager + 6 Consultants (3 teamlets)",
+        recommended: true,
+        details: [
+          "SBS integration, M&A pipeline, and value creation run in parallel",
+          "33% lower cost per consultant vs. weekly rates",
+          "50% more capacity for 33% additional cost vs. Medium",
+          "27% monthly discount vs. weekly diligence rates"
+        ]
+      }
+    ],
+    teamColumns: [
+      {
+        title: "Dedicated Team",
+        subtitle: "Embedded full-time, day-to-day",
+        members: [
+          { name: "Senior Manager", role: "Engagement lead", bio: null },
+          { name: "Consultants (4-6)", role: "Full-time, dedicated to Enverus", bio: null }
+        ]
+      },
+      {
+        title: "Core Leadership",
+        subtitle: "Day-to-day leadership and Enverus interface",
+        members: [
+          { name: "Andrew Welch", role: "Partner", bio: "Andrew leads Bain's energy practice in Houston. He led the original Enverus commercial diligence and has worked extensively with Blackstone portfolio companies on value creation programs across the energy sector.", clickable: true },
+          { name: "Tim Woolsey", role: "Partner", bio: "Tim is a former Chevron engineer who specializes in post-acquisition value creation for PE-backed companies, with particular depth in commercial acceleration, AI-enabled transformation, and retainer engagement models. He brings direct experience structuring and running dedicated team partnerships with portfolio companies. Tim is also a hands-on technologist who builds and deploys AI tools in his homelab.", clickable: true },
+          { name: "Kathleen Holtz", role: "Partner", bio: "Kathleen co-led the initial Enverus diligence and the follow-on diligences completed for subsequent acquisitions. She would serve as a key advisor on this engagement and the day-to-day partner contact whenever the retainer team supports M&A diligence work.", clickable: true }
+        ]
+      },
+      {
+        title: "Expert Advisors",
+        subtitle: "Flex by topic as questions arise",
+        members: [
+          { name: "O&G upstream operators", role: "Drilling, completions, basin economics", bio: null },
+          { name: "Utility & IOU executives", role: "Power market, regulatory, rate cases", bio: null },
+          { name: "Fintech & payments specialists", role: "Embedded lending, payment processing", bio: null },
+          { name: "AI/ML practitioners", role: "Product architecture, model deployment", bio: null },
+          { name: "M&A integration experts", role: "Synergy sizing, playbook design", bio: null },
+          { name: "Other topics as they arise", role: "", bio: null, italic: true }
+        ]
+      }
+    ]
+  }
+};
+
+// ========== RENDER FUNCTIONS ==========
+
+function renderPillars() {
+  Object.keys(PROPOSAL_DATA.pillars).forEach(key => {
+    const pillar = PROPOSAL_DATA.pillars[key];
+
+    // Questions
+    const qList = document.getElementById(`${key}-questions`);
+    if (qList) {
+      qList.innerHTML = pillar.questions.map(q =>
+        `<li class="question-item"><span class="question-bullet"></span>${q}</li>`
+      ).join('');
+    }
+
+    // Initiatives
+    const grid = document.getElementById(`${key}-initiatives`);
+    if (grid) {
+      grid.innerHTML = pillar.initiatives.map(init =>
+        `<div class="initiative-card expanded ${init.discovery ? 'discovery' : ''}" data-id="${init.id}" onclick="toggleCard(this)">
+          <div class="initiative-card-header">
+            <div class="initiative-card-left">
+              ${init.discovery ? '<span class="discovery-badge">To discover</span>' : `<span class="bu-badge ${init.buClass}">${init.bu}</span>`}
+              <span class="initiative-card-name">${init.name}</span>
+            </div>
+            <div class="initiative-card-meta">
+              <span class="ebitda-tag">${init.ebitda}</span>
+              <span class="urgency-tag ${init.urgencyClass}">${init.urgency}</span>
+              <span class="expand-icon">&#9660;</span>
+            </div>
+          </div>
+          <div class="initiative-card-body">
+            <div class="initiative-card-detail">
+              <div class="initiative-detail-row">
+                <div class="initiative-detail-col">
+                  <div class="initiative-detail-label">Sizing</div>
+                  <div class="initiative-detail-value">${init.sizing}</div>
+                </div>
+                <div class="initiative-detail-col">
+                  <div class="initiative-detail-label">EBITDA Detail</div>
+                  <div class="initiative-detail-value">${init.ebitdaDetail}</div>
+                </div>
+              </div>
+              <div class="initiative-detail-row">
+                <div class="initiative-detail-col">
+                  <div class="initiative-detail-label">Key Activities</div>
+                  <div class="initiative-detail-value">${init.activities}</div>
+                </div>
+                <div class="initiative-detail-col">
+                  <div class="initiative-detail-label">Owner</div>
+                  <div class="initiative-detail-value">${init.owner}</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>`
+      ).join('');
+    }
+  });
+}
+
+function renderKanban() {
+  const kanban = document.getElementById('kanban');
+  const stages = PROPOSAL_DATA.hopper.stages;
+  const allInits = [];
+
+  // Collect all initiatives with pillar tag
+  Object.keys(PROPOSAL_DATA.pillars).forEach(key => {
+    PROPOSAL_DATA.pillars[key].initiatives.forEach(init => {
+      allInits.push({ ...init, pillar: key });
+    });
+  });
+
+  kanban.innerHTML = stages.map((stage, idx) => {
+    // All start in stage 0 (Idea Generation)
+    const cards = idx === 0 ? allInits : [];
+    return `<div class="kanban-col" data-stage="${idx}">
+      <div class="kanban-col-header">${stage}</div>
+      <div class="kanban-col-count">${cards.length} initiative${cards.length !== 1 ? 's' : ''}</div>
+      <div class="kanban-col-cards">
+        ${cards.map(init =>
+          `<div class="kanban-card" data-id="${init.id}" data-pillar="${init.pillar}">
+            <div class="kanban-card-name">${init.name}</div>
+            <div class="kanban-card-meta">
+              <span class="kanban-card-ebitda">${init.ebitda}</span>
+              <span class="kanban-card-pillar ${init.pillar}">${init.pillar === 'defend' ? 'Defend' : init.pillar === 'grow' ? 'Grow' : 'Build \u201CEngine 2\u201D'}</span>
+            </div>
+          </div>`
+        ).join('')}
+      </div>
+    </div>`;
+  }).join('');
+}
+
+function renderPricing() {
+  const grid = document.getElementById('pricing-grid');
+  grid.innerHTML = PROPOSAL_DATA.commercial.options.map((opt, idx) =>
+    `<div class="pricing-card ${opt.recommended ? 'recommended' : ''}" onclick="selectPricing(this)">
+      <div class="pricing-card-rec">Recommended</div>
+      <div class="pricing-card-name">${opt.name}</div>
+      <div class="pricing-card-price">${opt.price}</div>
+      <div class="pricing-card-period">${opt.period}</div>
+      <div class="pricing-card-resources">${opt.resources}</div>
+      <ul class="pricing-card-details">
+        ${opt.details.map(d => `<li>${d}</li>`).join('')}
+      </ul>
+    </div>`
+  ).join('');
+}
+
+function renderTeam() {
+  const grid = document.getElementById('team-grid');
+  grid.innerHTML = PROPOSAL_DATA.commercial.teamColumns.map(col =>
+    `<div style="border:1px solid var(--border); border-radius:var(--card-radius); overflow:hidden;">
+      <div style="padding:16px 20px; background:var(--off-white); border-bottom:1px solid var(--border);">
+        <div style="font-size:15px; font-weight:700; color:var(--text);">${col.title}</div>
+        <div style="font-size:12px; color:var(--text-muted); margin-top:2px;">${col.subtitle}</div>
+      </div>
+      <div style="padding:12px 20px;">
+        ${col.members.map(m =>
+          `<div class="team-member ${m.clickable ? 'clickable' : ''}" style="padding:10px 0; border-bottom:1px solid var(--border);" ${m.clickable ? 'onclick="toggleTeamBio(this)"' : ''}>
+            <div class="team-member-name">${m.italic ? "<em>" : ""}${m.name}${m.italic ? "</em>" : ""}${m.clickable ? ' <span style="font-size:11px;color:var(--text-muted);">&#9660;</span>' : ''}</div>
+            <div class="team-member-role">${m.role}</div>
+            ${m.bio ? `<div class="team-member-bio" style="max-height:0;overflow:hidden;transition:max-height 0.4s ease;"><div style="padding-top:12px;font-size:13px;line-height:1.6;color:var(--text-light);">${m.bio}</div></div>` : ''}
+          </div>`
+        ).join('')}
+      </div>
+    </div>`
+  ).join('');
+}
+
+// ========== INTERACTION HANDLERS ==========
+
+function toggleCard(el) {
+  el.classList.toggle('expanded');
+}
+
+function toggleTeamBio(el) {
+  const bio = el.querySelector('.team-member-bio');
+  if (!bio) return;
+  if (bio.style.maxHeight && bio.style.maxHeight !== '0px') {
+    bio.style.maxHeight = '0px';
+  } else {
+    bio.style.maxHeight = bio.scrollHeight + 'px';
+  }
+}
+
+function selectPricing(el) {
+  document.querySelectorAll('.pricing-card').forEach(c => c.classList.remove('selected'));
+  el.classList.add('selected');
+}
+
+// Pillar tabs - scoped to parent section
+document.querySelectorAll('.pillar-tabs').forEach(tabBar => {
+  const section = tabBar.closest('section');
+  tabBar.querySelectorAll('.pillar-tab').forEach(tab => {
+    tab.addEventListener('click', () => {
+      const pillar = tab.dataset.pillar;
+      tabBar.querySelectorAll('.pillar-tab').forEach(t => t.classList.remove('active'));
+      section.querySelectorAll('.pillar-content').forEach(c => {
+        c.classList.remove('active');
+        c.style.display = 'none';
+      });
+      tab.classList.add('active');
+      const target = section.querySelector(`.pillar-content[data-pillar="${pillar}"]`);
+      if (target) { target.classList.add('active'); target.style.display = 'block'; }
+    });
+  });
+});
+
+// Sprint simulation
+let sprintRun = false;
+// Framework plus-sign popups
+function toggleFwPopup(btn) {
+  const popup = btn.querySelector('.fw-popup');
+  const isVisible = popup.style.display !== 'none';
+  // Close all popups first
+  document.querySelectorAll('.fw-popup').forEach(p => p.style.display = 'none');
+  document.querySelectorAll('.fw-plus-btn > div:first-child').forEach(b => b.textContent = '+');
+  if (!isVisible) {
+    popup.style.display = 'block';
+    btn.querySelector('div:first-child').textContent = '×';
+  }
+}
+// Close popups when clicking outside
+document.addEventListener('click', function(e) {
+  if (!e.target.closest('.fw-plus-btn')) {
+    document.querySelectorAll('.fw-popup').forEach(p => p.style.display = 'none');
+    document.querySelectorAll('.fw-plus-btn > div:first-child').forEach(b => b.textContent = '+');
+  }
+});
+
+function simulateSprint() {
+  if (sprintRun) return;
+  sprintRun = true;
+  const btn = document.querySelector('.simulate-btn');
+  btn.classList.add('running');
+  btn.textContent = 'Simulating...';
+
+  const sprint = PROPOSAL_DATA.hopper.sprint;
+  const cols = document.querySelectorAll('.kanban-col');
+
+  sprint.forEach((move, i) => {
+    setTimeout(() => {
+      const card = document.querySelector(`.kanban-card[data-id="${move.id}"]`);
+      if (!card) return;
+
+      card.classList.add('moving');
+
+      setTimeout(() => {
+        const targetCol = cols[move.to].querySelector('.kanban-col-cards');
+        card.classList.remove('moving');
+        card.classList.add('arriving');
+        targetCol.prepend(card);
+
+        // Update counts
+        cols.forEach(col => {
+          const count = col.querySelectorAll('.kanban-card').length;
+          col.querySelector('.kanban-col-count').textContent = `${count} initiative${count !== 1 ? 's' : ''}`;
+        });
+
+        setTimeout(() => card.classList.remove('arriving'), 500);
+      }, 400);
+    }, i * 600);
+  });
+
+  setTimeout(() => {
+    btn.textContent = 'Simulation Complete';
+  }, sprint.length * 600 + 500);
+}
+
+// ========== NAV SCROLL ==========
+
+document.querySelectorAll('.nav-item').forEach(item => {
+  item.addEventListener('click', () => {
+    const section = document.getElementById(item.dataset.section);
+    if (section) section.scrollIntoView({ behavior: 'smooth' });
+  });
+});
+
+// Scroll spy
+const sections = document.querySelectorAll('section[id]');
+const navItems = document.querySelectorAll('.nav-item');
+
+const scrollObserver = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      navItems.forEach(item => item.classList.remove('active'));
+      const match = document.querySelector(`.nav-item[data-section="${entry.target.id}"]`);
+      if (match) match.classList.add('active');
+    }
+  });
+}, { threshold: 0.3 });
+
+sections.forEach(s => scrollObserver.observe(s));
+
+// ========== FADE-IN ON SCROLL ==========
+
+const fadeObserver = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+    }
+  });
+}, { threshold: 0.1 });
+
+document.querySelectorAll('.fade-in').forEach(el => fadeObserver.observe(el));
+
+// ========== COUNTER ANIMATION ==========
+
+const counterObserver = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting && !entry.target.dataset.animated) {
+      entry.target.dataset.animated = 'true';
+      const target = parseFloat(entry.target.dataset.target);
+      const suffix = entry.target.dataset.suffix || '';
+      const duration = 1500;
+      const start = performance.now();
+
+      function update(now) {
+        const elapsed = now - start;
+        const progress = Math.min(elapsed / duration, 1);
+        const eased = 1 - Math.pow(1 - progress, 3);
+        const current = Math.round(eased * target);
+        entry.target.textContent = current + suffix;
+        if (progress < 1) requestAnimationFrame(update);
+      }
+      requestAnimationFrame(update);
+    }
+  });
+}, { threshold: 0.5 });
+
+document.querySelectorAll('.counter').forEach(el => counterObserver.observe(el));
+
+// ========== INIT ==========
+
+function init() {
+  renderPillars();
+  renderKanban();
+  renderPricing();
+  renderTeam();
+}
+
+init();
+</script>
+</body>
+</html>
