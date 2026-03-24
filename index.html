@@ -6,6 +6,20 @@
 <title>Enverus Full Potential Partnership | Bain & Company</title>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 <!-- Chart.js removed - not currently used -->
+<script>
+(function() {
+  var hash = '5e884898da28047151d0e56f8dc6292773603d0d6aabbdd62a11ef721d1542d8';
+  var stored = sessionStorage.getItem('_auth');
+  if (stored === hash) return;
+  var pw = prompt('Enter password to view this document:');
+  if (!pw) { document.documentElement.innerHTML = ''; return; }
+  crypto.subtle.digest('SHA-256', new TextEncoder().encode(pw)).then(function(buf) {
+    var h = Array.from(new Uint8Array(buf)).map(function(b) { return b.toString(16).padStart(2,'0'); }).join('');
+    if (h === hash) { sessionStorage.setItem('_auth', hash); }
+    else { document.documentElement.innerHTML = '<body style="background:#1a1a2e;color:white;font-family:Inter,sans-serif;display:flex;align-items:center;justify-content:center;height:100vh;margin:0"><h2>Incorrect password</h2></body>'; }
+  });
+})();
+</script>
 <style>
 /* ========== CSS CUSTOM PROPERTIES ========== */
 :root {
